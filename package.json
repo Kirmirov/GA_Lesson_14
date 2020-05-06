@@ -1,0 +1,26 @@
+{
+  "name": "ga_lesson_13",
+  "version": "1.0.0",
+  "description": "gulp_start",
+  "main": "index.js",
+  "dependencies": {
+    "gulp": "^4.0.2"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "gulp-cssmin": "^0.2.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Kirmirov/GA_Lesson_13.git"
+  },
+  "author": "KVS",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kirmirov/GA_Lesson_13/issues"
+  },
+  "homepage": "https://github.com/Kirmirov/GA_Lesson_13#readme"
+}
