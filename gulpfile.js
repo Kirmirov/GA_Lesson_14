@@ -1,20 +1,32 @@
-let gulp = require('gulp'),
-    cssmin = require('gulp-cssmin'),
-    rename = require('gulp-rename'),
-    browserSync = require ('browser-sync').create();
+const {src, dest, watch} = require('gulp');
+const cssmin = require('gulp-cssmin');
+const rename = require('gulp-rename');
+const sass = require('gulp-sass');
+const browserSync = require ('browser-sync').create();
 
-gulp.task('zipcss', function() {
-  return gulp.src('src/**/*.css')
+exports.zcss = function cm () {
+  return src('./**/*.css')
     .pipe(cssmin())
     .pipe(rename({suffix: '.min'}))
-    .pipe(gulp.dest('dir/css'));
-})
+    .pipe(dest('./css'));
+};
 
-gulp.task('browser-sync', function() {
+exports.serve = function bs() {
+  servSass();
   browserSync.init({
     server: {
-      baseDir: "app/src/"
+      baseDir: "./"
     }
   });
-  gulp.watch("app/src/*.html").on('change', browserSync.reload)
-})
+  watch("./*.html").on('change', browserSync.reload);
+  watch("./sass/**/*.html", servSass);
+  watch("./js/*.js").on('change', browserSync.reload);
+};
+
+function servSass() {
+  return src('./sass/*.scss')
+    .pipe(sass())
+    .pipe(dest('./css'))
+    .pipe(browserSync.stream());
+};
+
