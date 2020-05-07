@@ -17,11 +17,10 @@
   },
   "homepage": "https://github.com/Kirmirov/GA_Lesson_14#readme",
   "devDependencies": {
+    "browser-sync": "^2.26.7",
     "gulp": "^4.0.2",
     "gulp-cssmin": "^0.2.0",
     "gulp-sass": "^4.1.0"
   },
-  "dependencies": {
-    "browser-sync": "^2.26.7"
-  }
+  "dependencies": {}
 }
