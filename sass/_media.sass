@@ -1,0 +1,63 @@
+@media screen and ( max-width: 1440px )
+  .menu
+    &__contacts
+      display: flex
+      align-items: center
+  .nav
+    &__item
+      margin-right: 2rem
+@media screen and ( max-width: 1200px )
+  html
+    font-size: 12px
+  .nav
+    &__item
+      margin-right: 1rem
+@media screen and ( max-width: 992px )
+  .hero
+    &__instagram
+      display: none
+    &__content
+      margin-left: 0
+    &__scroll-down
+      cursor: default
+  .nav
+    display: none
+  .button
+    &:hover
+      cursor: default
+    &--primary
+      box-shadow: none
+  .phone
+    cursor: default
+@media screen and ( max-width: 570px )
+  .contacts
+    &__button
+      display: none
+    &__phone
+      margin-right: 0
+      color: $light
+      text-decoration: none
+  .hero
+    &__title
+      font-size: 23px
+      line-height: 1.4
+      margin-bottom: 0.9rem
+    &__text
+      font-size: 18px
+      margin-bottom: 2.9rem
+      line-height: 1.35
+    &__content
+      max-width: 25.75rem
+    &__button
+      display: block
+      min-width: 22.86rem
+      margin-bottom: 2.1rem
+      min-width: 28.2rem
+      min-height: 4.25rem
+      border-radius: 0
+    &__scroll-down
+      display: none
+@media screen and ( max-height: 490px  )
+  .hero
+    &__scroll-down
+      display: none
