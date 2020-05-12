@@ -486,6 +486,7 @@ body {
       background-color: #E3B873; }
 
 .title {
+  margin: 0;
   font-family: 'Yeseva One', cursive;
   text-transform: uppercase;
   font-size: 2.857rem;
@@ -541,13 +542,16 @@ body {
     max-width: 25.75rem; }
   .hero__button {
     display: block;
-    min-width: 22.86rem;
     margin-bottom: 2.1rem;
     min-width: 28.2rem;
     min-height: 4.25rem;
     border-radius: 0; }
   .hero__scroll-down {
     display: none; } }
+
+@media screen and (max-width: 320px) {
+  .hero__button {
+    min-width: 23.2rem; } }
 
 @media screen and (max-height: 490px) {
   .hero__scroll-down {
