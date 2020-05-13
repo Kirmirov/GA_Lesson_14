@@ -539,23 +539,6 @@ img {
     background-color: #E3B873;
     color: #ffffff; }
 
-@media screen and (max-width: 991px) {
-  .box-card {
-    margin-bottom: 7rem; }
-  .card {
-    display: inline-flex;
-    align-items: start; }
-    .card__text {
-      margin-top: -12rem; }
-    .card__price {
-      padding: 1rem 2.8rem; }
-    .card__list {
-      margin-bottom: 1.314rem; } }
-
-@media screen and (max-width: 320px) {
-  .card__text {
-    margin-right: 20px; } }
-
 @media screen and (max-width: 1440px) {
   .menu__contacts {
     display: flex;
@@ -584,6 +567,22 @@ img {
     box-shadow: none; }
   .phone {
     cursor: default; } }
+
+@media screen and (max-width: 991px) {
+  .box-card {
+    margin-bottom: 7rem; }
+  .card {
+    align-items: start; }
+    .card__text {
+      margin-top: -12rem; }
+    .card__price {
+      padding: 1rem 2.8rem; }
+    .card__list {
+      margin-bottom: 1.314rem; } }
+
+@media screen and (max-width: 320px) {
+  .card__text {
+    margin-right: 1.5rem; } }
 
 @media screen and (max-width: 570px) {
   .contacts__button {

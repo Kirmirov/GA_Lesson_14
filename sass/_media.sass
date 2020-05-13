@@ -29,6 +29,23 @@
       box-shadow: none
   .phone
     cursor: default
+// For _types.sass
+@media screen and ( max-width: 991px )
+  .box-card
+    margin-bottom: 7rem
+  .card
+    align-items: start
+    &__text
+      margin-top: -12rem
+    &__price
+      padding: 1rem 2.8rem
+    &__list
+      margin-bottom: 1.314rem
+@media screen and ( max-width: 320px )
+  .card
+    &__text
+      margin-right: 1.5rem
+
 @media screen and ( max-width: 570px )
   .contacts
     &__button
