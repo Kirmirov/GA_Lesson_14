@@ -29,10 +29,18 @@
       box-shadow: none
   .phone
     cursor: default
-// For _types.sass
+
+// For _types.sass and _design.sass
 @media screen and ( max-width: 991px )
+  .design
+    background-color: $dark
+    &__title-text
+      color: $light
+  .section-title
+    &__heading
+      color: $light
   .box-card
-    margin-bottom: 7rem
+      margin-bottom: 7rem
   .card
     align-items: start
     &__text
@@ -41,10 +49,24 @@
       padding: 1rem 2.8rem
     &__list
       margin-bottom: 1.314rem
+    &__list--hidden
+      li:nth-child(n+8)
+        display: none
+    &__item--ellipsis
+      &::after
+        content: '...'
+@media screen and ( max-width: 375px )
+  .design
+    &__title-text
+      font-size: 15px
+      line-height: 135.84%
+
+
 @media screen and ( max-width: 320px )
   .card
     &__text
       margin-right: 1.5rem
+
 
 @media screen and ( max-width: 570px )
   .contacts
