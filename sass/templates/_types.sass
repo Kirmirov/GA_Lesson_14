@@ -1,0 +1,64 @@
+.types
+  &__section-title
+    margin-bottom: 2.1rem
+
+.box-card
+  display: flex
+  justify-content: center
+
+.card
+  display: flex
+  flex-direction: column
+  align-items: center
+  &__text
+    position: relative
+    min-width: 23.6rem
+    margin-top: -9rem
+    background-color: $light
+    padding: 1.79rem 2.14rem
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03)
+  &__title
+    margin: 0
+    margin-bottom: 0.7rem
+    font-family: 'Yeseva One', cursive
+    font-size: 1.29rem
+    color: $dark
+  &__list
+    margin: 0 0 2.314rem 0
+    padding: 0 0 0 1.29rem
+    font-family: 'Futura Book', sans-serif
+    font-size: 1.07rem
+    line-height: 1.79rem
+    color: $secondary
+  &__price
+    position: absolute
+    left: 0
+    bottom: -2.14rem
+    padding: 1.214rem 2.8rem
+    font-family: 'Yeseva One', cursive
+    font-size: 1.29rem
+    text-transform: uppercase
+    background-color: $primary
+    color: $light
+
+@media screen and ( max-width: 991px )
+  .box-card
+    margin-bottom: 7rem
+  .card
+    display: inline-flex
+    align-items: start
+    &__text
+      margin-top: -12rem
+    &__price
+      padding: 1rem 2.8rem
+    &__list
+      margin-bottom: 1.314rem
+@media screen and ( max-width: 320px )
+  .card
+    &__text
+      margin-right: 20px
+  
+
+
+
+
