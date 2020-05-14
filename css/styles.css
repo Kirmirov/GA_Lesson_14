@@ -417,7 +417,7 @@ nav, footer, header, aside {
   opacity: 0;
   visibility: hidden; }
   .policy__checkbox:checked + .policy__lable::before {
-    background: #E3B873 url("..img/check.svg") no-repeat center/0.8rem; }
+    background: #E3B873 url("../img/check.svg") no-repeat center/0.8rem; }
 
 .policy__lable {
   display: flex;
