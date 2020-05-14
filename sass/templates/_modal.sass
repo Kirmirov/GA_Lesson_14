@@ -1,4 +1,6 @@
 .modal
+  opacity: 0
+  visibility: hidden
   position: fixed
   display: flex
   justify-content: center
@@ -11,11 +13,14 @@
   width: 100%
   height: 100%
   background-color: rgba($dark, 0.6)
+  &--visible
+    opacity: 1
+    visibility: visible
   &__dialog
     position: relative
     max-width: 36.36rem
     padding: 33px 49px 27px 49px
-    background: $dark
+    background: $dark url('../img/bg-modal.svg') no-repeat center
     color: $light
   &__close
     position: absolute
@@ -27,7 +32,7 @@
     background: transparent url('../img/close-button.svg') no-repeat center
     cursor: pointer
   &__title
-    margin-bottom: 2.43rem
+    margin-bottom: 1.8rem
     font-family: 'Yeseva One', cursive
     font-size: 1.38rem
     line-height: 26px
@@ -36,13 +41,12 @@
   &__form
     display: flex
     flex-direction: column
-  &__label
-    margin-bottom: 7px
   &__input
     margin-bottom: 3.43rem
-    &::last-of-type
-      margin-bottom: 1rem
+    &:last-of-type
+      margin-bottom: -0.357rem
   &__policy
     margin-bottom: 2.7rem
   &__button
     align-self: flex-end
+    padding: 1.357rem 3.714rem
