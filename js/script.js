@@ -1,26 +1,40 @@
-document.addEventListener('DOMContentLoaded', function(event) {
-  const modal = document.querySelector('.modal');
-  const modalBtn = document.querySelectorAll('[data-toggle=modal]');
-  const closeModal = document.querySelector('.modal__close');
-  const switchModal = () => {
-    modal.classList.toggle('modal--visible');
-  };
-  modalBtn.forEach(element => {
-    element.addEventListener('click', switchModal);
-  });
-  closeModal.addEventListener('click', switchModal);
-  
-  document.onkeydown = function(evt) {
-    evt = evt || window.event;
-    if (evt.keyCode == 27 && modal.classList.contains('modal--visible') == true) {
-      switchModal(modal);
-    }
-  };
+$(document).ready(function() {
+  var modal = $('.modal'),
+      modalBtn = $('[data-toggle=modal]'),
+      closeBtn = $('.modal__close'),
+      scrollUp = $('.scroll-up');
 
-  document.onclick = function(e){
-    if (e.target.className == modal.className) {
-      switchModal(modal);
-    };
-  }
+  $(modalBtn).click(function(){
+    modal.toggleClass('modal--visible');
+  });
+
+  $(closeBtn).click(function(){
+    modal.toggleClass('modal--visible');
+  }); 
+
+  $(document).click(function (e){ 
+		if (modal.is(e.target)){ 
+      modal.toggleClass('modal--visible'); 
+		}
+	});
+
+  $(document).keydown(function (evt){
+    if (modal.hasClass('modal--visible') && (evt.which == 27)){
+      modal.toggleClass('modal--visible');
+    }
+  })
+
+  $(window).scroll(function() {
+    if ($(window).scrollTop() > 500) {
+      scrollUp.addClass('scroll-up--show');
+    } else {
+      scrollUp.removeClass('scroll-up--show');
+    }
+  });
+  
+  scrollUp.on('click', function(e) {
+    e.preventDefault();
+    $('html, body').animate({scrollTop:0}, '300');
+  });
 
 });
