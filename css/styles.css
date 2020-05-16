@@ -378,7 +378,8 @@ nav, footer, header, aside {
   border: none;
   border-radius: 2px;
   text-transform: uppercase;
-  font-size: 0.93rem; }
+  font-size: 0.93rem;
+  outline: none; }
   .button:hover {
     cursor: pointer; }
   .button--primary {
@@ -436,15 +437,15 @@ nav, footer, header, aside {
   display: inline-block;
   background: url("../img/arrow-down.svg") no-repeat center;
   transform: rotate(180deg);
-  width: 50px;
-  height: 50px;
+  width: 3.57rem;
+  height: 3.57rem;
   text-align: center;
   border-radius: 50%;
   border: 3px solid #E3B873;
-  margin: 30px;
+  margin: 2.14rem;
   position: fixed;
-  bottom: 30px;
-  right: 30px;
+  bottom: 2.14rem;
+  right: 2.14rem;
   z-index: 1022;
   opacity: 0;
   visibility: hidden; }
@@ -660,21 +661,45 @@ nav, footer, header, aside {
     width: 28px;
     height: 28px;
     background: transparent url("../img/close-button.svg") no-repeat center;
-    cursor: pointer; }
+    cursor: pointer;
+    outline: none; }
   .modal__title {
     margin-bottom: 1.8rem;
     font-family: 'Yeseva One', cursive;
     font-size: 1.38rem;
-    line-height: 26px;
+    line-height: 1.857rem;
     text-align: center;
     color: #ffffff; }
   .modal__form {
     display: flex;
     flex-direction: column; }
   .modal__input {
-    margin-bottom: 3.43rem; }
+    margin-bottom: 3.43rem;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+    outline: none;
+    color: #ffffff; }
     .modal__input:last-of-type {
       margin-bottom: -0.357rem; }
+    .modal__input:focus::-webkit-input-placeholder {
+      opacity: 0;
+      -webkit-transition: opacity 0.3s ease;
+      transition: opacity 0.3s ease; }
+    .modal__input:focus::-moz-placeholder {
+      opacity: 0;
+      -moz-transition: opacity 0.3s ease;
+      transition: opacity 0.3s ease; }
+    .modal__input:focus:-ms-input-placeholder {
+      opacity: 0;
+      -ms-transition: opacity 0.3s ease;
+      transition: opacity 0.3s ease; }
+    .modal__input:focus::-ms-input-placeholder {
+      opacity: 0;
+      -ms-transition: opacity 0.3s ease;
+      transition: opacity 0.3s ease; }
+    .modal__input:focus::placeholder {
+      opacity: 0;
+      transition: opacity 0.3s ease; }
   .modal__policy {
     margin-bottom: 2.7rem; }
   .modal__button {
@@ -682,6 +707,8 @@ nav, footer, header, aside {
     padding: 1.357rem 3.714rem; }
 
 @media screen and (max-width: 1440px) {
+  .hero__scroll-up {
+    margin-right: 0.5rem; }
   .menu__contacts {
     display: flex;
     align-items: center; }
@@ -766,6 +793,8 @@ nav, footer, header, aside {
     border-radius: 0;
     font-size: 13px; }
   .hero__scroll-down {
+    display: none; }
+  .hero__scroll-up {
     display: none; } }
 
 @media screen and (max-width: 375px) {

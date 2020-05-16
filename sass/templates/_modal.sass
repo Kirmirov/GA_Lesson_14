@@ -31,11 +31,12 @@
     height: 28px
     background: transparent url('../img/close-button.svg') no-repeat center
     cursor: pointer
+    outline: none
   &__title
     margin-bottom: 1.8rem
     font-family: 'Yeseva One', cursive
     font-size: 1.38rem
-    line-height: 26px
+    line-height: 1.857rem
     text-align: center
     color: $light
   &__form
@@ -43,8 +44,15 @@
     flex-direction: column
   &__input
     margin-bottom: 3.43rem
+    opacity: 1
+    transition: opacity 0.3s ease
+    outline: none
+    color: $light
     &:last-of-type
       margin-bottom: -0.357rem
+    &:focus::placeholder
+      opacity: 0 
+      transition: opacity 0.3s ease
   &__policy
     margin-bottom: 2.7rem
   &__button
