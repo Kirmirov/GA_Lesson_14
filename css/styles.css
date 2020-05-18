@@ -929,7 +929,7 @@ nav, footer, header, aside {
       padding: 1rem 2.8rem; }
     .card__list {
       margin-bottom: 1.314rem; }
-    .card__list--hidden li:nth-child(n+8) {
+    .card__list--half li:nth-child(n+8) {
       display: none; }
     .card__item--ellipsis::after {
       content: '...'; } }

@@ -44,7 +44,7 @@ $(document).ready(function() {
     loop: true,
     spaceBetween: 15,
     pagination: {
-      el: '.top',
+      el: '.swiper-pagination',
       type: 'bullets',
     },
     navigation: {
