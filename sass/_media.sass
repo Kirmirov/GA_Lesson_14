@@ -33,15 +33,15 @@
     cursor: default
 
 // For _types.sass and _design.sass
-@media screen and ( max-width: 991px )
+@media screen and ( max-width: 992px )
   .design
-    background-color: $dark
+    background: $dark url('../img/bg-modal.svg')
     &__title-text
       color: $light
   .section-title
     &__heading
       color: $light
-  .box-card
+  .box-align-center
       margin-bottom: 7rem
   .card
     align-items: start
@@ -63,12 +63,10 @@
       font-size: 15px
       line-height: 135.84%
 
-
 @media screen and ( max-width: 320px )
   .card
     &__text
       margin-right: 1.5rem
-
 
 @media screen and ( max-width: 570px )
   .contacts
@@ -104,8 +102,40 @@
   .hero
     &__button
       min-width: 100%
-@media screen and ( max-height: 490px  )
+@media screen and ( max-height: 560px  )
   .hero
     &__scroll-down
       display: none
-  .scro
+@media screen and ( max-height: 670px) and (max-width: 1440px)
+  .hero
+    &__scroll-down
+      display: none
+
+@media screen and ( max-width: 768px )
+  .project
+    &-card
+      &__img
+        margin-top: 40px
+  .swiper
+    &-container
+      &--right
+        right: 0
+@media screen and ( max-width: 425px )
+  .project
+    &__title-content
+      &::after
+        display: none
+
+// sixfoots
+@media screen and ( max-width: 1024px )
+  .slaid
+    &-titles
+      margin-right: -13.5rem
+@media screen and ( max-width: 1014px )
+  .sixfoots
+    &-text-box
+      margin-bottom: 4rem
+@media screen and ( max-width: 991px )
+  .sixfoots
+    display: none
+  

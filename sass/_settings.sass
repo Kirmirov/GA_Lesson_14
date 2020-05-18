@@ -32,6 +32,8 @@ nav, footer, header, aside
 
 .section
   padding: 60px 0
+  &--dark
+    background: $dark url('../img/bg-modal.svg')
   &-title
     text-align: center
     text-transform: uppercase
@@ -39,6 +41,12 @@ nav, footer, header, aside
     font-size: 1.43rem
     &__heading
       margin-bottom: 0.93rem
+    &__content
+        text-align: left
+        font-size: 1.93rem
+        line-height: 2.64rem
+        letter-spacing: -0.07em
+        color: $primary
   &-title__image 
     &::before, &::after
       content: ''
@@ -49,4 +57,8 @@ nav, footer, header, aside
       height: 2px
       background-color: $primary
       border-radius: 20%
-
+  &-text__content
+      text-align: left
+      font-size: 1.29rem
+      line-height: 2.07rem
+      color: $light
