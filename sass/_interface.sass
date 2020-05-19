@@ -23,13 +23,20 @@
   &--light
     font-size: 1.07rem
     color: rgba($light, 0.5)
+
 .input
   padding: 0.5rem 0
   font-size: 1.29rem
-  background-color: transparent
+  opacity: 1
+  outline: none
   border-bottom: 1px solid rgba(54, 54, 54, 0.3) 
-  &::placeholder
-    color: $light
+  transition: opacity 0.3s ease
+  &:focus::placeholder
+    opacity: 0 
+    transition: opacity 0.3s ease
+  &--light
+    &::placeholder
+      color: $light
 
 .policy
   &__checkbox
@@ -61,7 +68,7 @@
   text-align: center
   border-radius: 50%
   border: 3px solid $primary
-  margin: 2.14rem
+  margin-bottom: 2.14rem
   position: fixed
   bottom: 2.14rem
   right: 2.14rem

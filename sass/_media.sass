@@ -38,9 +38,8 @@
     background: $dark url('../img/bg-modal.svg')
     &__title-text
       color: $light
-  .section-title
-    &__heading
-      color: $light
+    &__section-title
+        color: $light
   .box-align-center
       margin-bottom: 7rem
   .card
@@ -127,15 +126,77 @@
         display: none
 
 // sixfoots
+@media screen and ( max-width: 1440px )
+  .btnBotL, .btnBotR
+    bottom: 7.9rem
 @media screen and ( max-width: 1024px )
+  .btnBotR
+    left: 19.5rem
   .slaid
     &-titles
-      margin-right: -13.5rem
-@media screen and ( max-width: 1014px )
-  .sixfoots
-    &-text-box
-      margin-bottom: 4rem
+      &__box
+        &--no-mr
+          margin-right: 1.5rem
 @media screen and ( max-width: 991px )
   .sixfoots
     display: none
-  
+
+// control
+@media screen and ( max-width: 425px )
+  .video
+    &__play
+      width: 19%
+  .control
+    &__section
+      padding-bottom: 0
+      background-color: $dark
+    &__section-title
+      font-size: 22px
+    &__video
+      margin-bottom: 2rem
+      max-width: 340px
+      min-height: 207px
+      background: url('../img/video-prev-min.jpg') center no-repeat
+      &::before
+        background-color: rgba($dark, 0.1)
+    &__text
+      margin-bottom: 3rem
+      color: $light
+      font-size: 14px
+      line-height: 169.8%
+      &::before
+        margin-bottom: 1.5rem
+    &__form
+      margin: auto
+      display: flex
+      flex-direction: column
+      justify-content: none
+      max-width: 55rem
+      order: 4
+    &__input-group
+      color: $secondary
+      &--up
+        margin-bottom: 63px
+    &__lable
+      padding: 0
+      margin-bottom: -7px
+      font-size: 15px
+      line-height: 20px
+    &__input
+      padding-top: 5px
+      background-color: transparent
+      &::placeholder
+        font-size: 18px
+        color: $light
+    &__button
+      margin-bottom: -25px
+      padding: 18px 70px
+      font-size: 1.1rem
+      letter-spacing: 1px
+      order: 5
+    &__policy
+      display: inline
+      flex-basis: 100%
+      margin-top: 1.2rem
+      margin-bottom: 62px
+      color: $light

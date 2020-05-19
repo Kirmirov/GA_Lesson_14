@@ -23,5 +23,7 @@
     "gulp-cssmin": "^0.2.0",
     "gulp-sass": "^4.1.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "animate.css": "^4.1.0"
+  }
 }
