@@ -152,4 +152,42 @@ $(document).ready(function() {
       $('#card-up6').addClass('arrivalLeft');
     }
   });
+// Валидатор
+
+  $('.modal__form').validate({
+    errorClass: "invalid",
+    highlight: function(element, errorClass) {
+      $(element).addClass('input--redline');
+    },
+    validClass: "success",
+    errorElement: "div",
+    rules: {
+      userName: {
+        required: true,
+        minlenght: 2
+      },
+      userPhone: {
+        required: true,
+      },
+      userEmail: {
+        required: true,
+        email: true
+      }
+    },
+    messages: {
+      userName: {
+        required: "Пожалуйста, укажите Ваше имя",
+        minlenght: "Пожалуйста, укажите полное имя"
+      },
+      userPhone: {
+        required: "Пожалуйта, укажите контакный телефон",     
+      },
+      userEmail: {
+        required: "Пожалуйста, укажите свой электронный адрес",
+        email: "Пожалуйста укажите свой адрес в формате name@domain.com"
+      }
+    }
+  });
+
+  $('[type=tel]').mask('0000-0000', {placeholder: "+7(__) __-__-___"});
 });

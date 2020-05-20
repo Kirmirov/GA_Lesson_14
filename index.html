@@ -13,6 +13,7 @@
 </head>
 
 <body>
+  <!-- ГЛАВНОЕ МЕНЮ -->
   <header class="header">
     <div class="container">
       <div class="menu">
@@ -34,11 +35,11 @@
     </div>
   </header>
   <main>
-    <!-- Центр и низ первой страницы. Кнопка Инста, кнопка Ниже, центральный фон. -->
+    <!-- Scroll-up -->
+    <a href="#" class="scroll-up hero__scroll-up"></a>
+    <!-- Scroll-up -->
+    <!-- ПЕРВАЯ СТРАНИЦА -->
     <section class="hero">
-      <!-- Scroll-up -->
-      <a href="#" class="scroll-up hero__scroll-up"></a>
-      <!-- Scroll-up -->
       <div class="instagram hero__instagram">
         <a class="instagram__link" href="#">Instagram</a>
       </div>
@@ -47,14 +48,13 @@
           <h1 class="hero__title">Турецкий ремонт в&nbsp;<span class="hero__title--primary">Ростове-на-Дону</span></h1>
           <p class="hero__text">Получите готовый ремонт под ключ в срок с экономией работчего времени до 45 дней и 20%
             от стоимости материалов за счет организации работы</p>
-          <button class="button hero__button button--primary" data-toggle="modal">Расчитать стоимость</button>
-          <button class="button hero__button button--outline" data-toggle="modal">Отправить заявку</button>
+          <button class="button hero__button button--primary">Расчитать стоимость</button>
+          <button class="button hero__button button--outline">Отправить заявку</button>
         </div>
       </div>
       <a class="hero__scroll-down" href="#">Листайте вниз</a>
     </section>
-    <!-- Центр и них первой страницы. Кнопка Инста, кнопка Ниже, центральный фон. -->
-    <!-- Секция завершенные проекты -->
+    <!-- Секция ПРОЕКТЫ -->
     <section class="section project section--dark">
       <div class="container">
         <!-- Секция с текстом -->
@@ -185,8 +185,7 @@
         </div>
       </div>
     </section>
-    <!-- Секция завершенные проекты -->
-    <!-- Секция с камерой -->
+    <!-- Секция КОНТРОЛЬ -->
     <section class="section control control__section">
       <div class="container">
         <div class="section-title control__section-title section-title--light">
@@ -204,15 +203,15 @@
           объектов! Оставьте заявку ниже чтобы получить ссылку на трансляцию.
         </p>
         <form class="form control__form" action="#">
-          <div class="control__input-group control__input-group--up">
+          <div class="input-group control__input-group control__input-group--up">
             <lable class="lable control__lable" for="user-name">Имя</lable>
-            <input class="input control__input" id="user-name" type="text" placeholder="Как вас зовут">
+            <input class="input control__input" name="userName" id="user-name" type="text" placeholder="Как вас зовут">
           </div>
-          <div class="control__input-group">
-            <lable class="lable control__lable" for="user-phone">Телефон</lable>
-            <input class="input control__input" id="user-phone" type="tel" placeholder="Ваш номер телефона">
+          <div class="input-group control__input-group input-group--correct">
+            <lable class="lable control__lable" for="user-phone" type="tel">Телефон</lable>
+            <input class="input control__input" name="userPhone" id="user-phone" type="tel" placeholder="Ваш номер телефона">
           </div>
-          <button class="button button--primary control__button" data-toggle="modal">Отправить</button>
+          <button class="button button--primary control__button">Отправить</button>
           <div class="policy control__policy">
             <input class="policy__checkbox" id="policy-checkbox" type="checkbox" name="policy-checkbox" checked>
             <lable class="policy__lable contol__policy-lable" for="policy-checkbox">Я соглашаюсь с обработкой данных
@@ -221,7 +220,7 @@
         </form>
       </div>
     </section>
-    <!-- Секция с фото типов работ -->
+    <!-- Секция ВИДЫ РАБОТ -->
     <section class="section types types__section">
       <div class="container">
         <!-- Титул и заглавная иконка -->
@@ -295,7 +294,7 @@
         </div>
       </div>
     </section>
-    <!-- Cекция с фото дизайнов -->
+    <!-- Cекция ДИЗАЙН -->
     <section class="section design design__section">
       <div class="container">
         <!-- Титул и заглавная иконка -->
@@ -379,6 +378,7 @@
         </div>
       </div>
     </section>
+    <!-- Секция ШЕСТЬШАГОВ -->
     <section class="section sixfoots section--dark">
       <div class="container">
         <div class="row no-gutters">
@@ -534,6 +534,7 @@
         </div>
       </div>
     </section>
+    <!-- Секция КОМАНДА -->
     <section class="section team team__section">
       <div class="container">
         <div class="section-title section-title--light">
@@ -604,6 +605,7 @@
       </div>
     </section>
   </main>
+  <!-- Секция ФУТЕР -->
   <footer class="footer section--dark">
     <div class="container">
       <div class="footer__wrap">
@@ -613,16 +615,16 @@
         <form class="form footer__form" action="#">
           <div class="input-group footer__input-group">
             <lable class="lable footer__lable lable--light" for="user-name">Имя</lable>
-            <input class="input footer__input input--light" id="user-name" type="text" placeholder="Как вас зовут:">
+            <input class="input footer__input input--light" name="userName" id="user-name" type="text" placeholder="Как вас зовут:">
           </div>
-          <div class="input-group footer__input-group">
-            <lable class="lable footer__lable lable--light" for="user-phone">Телефон</lable>
-            <input class="input footer__input input--light" id="user-phone" type="tel"
+          <div class="input-group footer__input-group input-group--correct">
+            <lable class="lable footer__lable lable--light" for="user-phone" type="tel">Телефон</lable>
+            <input class="input footer__input input--light" name="userPhone" id="user-phone" type="tel"
               placeholder="Ваш номер телефона:">
           </div>
           <div class="input-group footer__input-group footer__input-group--full-width">
             <lable class="lable footer__lable lable--light" for="user-question">Вопрос</lable>
-            <input class="input footer__input input--light" id="user-question" type="text"
+            <input class="input footer__input input--light" name="userQuestion" id="user-question" type="text"
               placeholder="Я хочу спросить:">
           </div>
           <div class="policy footer__policy">
@@ -661,12 +663,18 @@
       <button class="modal__close"></button>
       <h3 class="modal__title">Оставьте заявку и наш менеджер свяжется с вами</h3>
       <form class="form modal__form" action="#">
-        <lable class="lable modal__lable lable--light" for="user-name">Имя</lable>
-        <input class="input modal__input input--light" name="userName" id="user-name" type="text" placeholder="Как вас зовут">
-        <lable class="lable modal__lable lable--light" for="user-phone">Телефон</lable>
-        <input class="input modal__input input--light" name="userPhone" id="user-phone" type="tel" placeholder="Ваш номер телефона">
-        <lable class="lable modal__lable lable--light" for="user-email">Email</lable>
-        <input class="input modal__input input--light" name="userEmail" id="user-email" type="email" placeholder="Ваш email:">
+        <div class="input-group modal__input-group">
+          <lable class="lable modal__lable lable--light" for="user-name">Имя</lable>
+          <input class="input modal__input input--light" name="userName" id="user-name" type="text" placeholder="Как вас зовут">
+        </div>
+        <div class="input-group modal__input-group">
+          <lable class="lable modal__lable lable--light" for="user-phone">Телефон</lable>
+          <input class="input modal__input input--light" name="userPhone" id="user-phone" type="tel" placeholder="Ваш номер телефона">
+        </div>
+        <div class="input-group modal__input-group modal__input-group--last">
+          <lable class="lable modal__lable lable--light" for="user-email">Email</lable>
+          <input class="input modal__input input--light" name="userEmail" id="user-email" type="email" placeholder="Ваш email:">
+        </div>
         <div class="policy modal__policy">
           <input class="policy__checkbox" type="checkbox" name="policy-checkbox" checked>
           <lable class="policy__lable" for="policy-checkbox">Я соглашаюсь с обработкой данных</lable>
@@ -680,6 +688,7 @@
   <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
   <script src="js/wow.min.js"></script>
   <script src="js/jquery.validate.min.js"></script>
+  <script src="js/jquery.mask.min.js"></script>
   <script src="js/script.js"></script>
 </body>
 

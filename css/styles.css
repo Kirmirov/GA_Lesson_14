@@ -441,16 +441,22 @@ nav, footer, header, aside {
   .input:focus::placeholder {
     opacity: 0;
     transition: opacity 0.3s ease; }
-  .input--light::-webkit-input-placeholder {
+  .input--light {
     color: #ffffff; }
-  .input--light::-moz-placeholder {
-    color: #ffffff; }
-  .input--light:-ms-input-placeholder {
-    color: #ffffff; }
-  .input--light::-ms-input-placeholder {
-    color: #ffffff; }
-  .input--light::placeholder {
-    color: #ffffff; }
+    .input--light::-webkit-input-placeholder {
+      color: #ffffff; }
+    .input--light::-moz-placeholder {
+      color: #ffffff; }
+    .input--light:-ms-input-placeholder {
+      color: #ffffff; }
+    .input--light::-ms-input-placeholder {
+      color: #ffffff; }
+    .input--light::placeholder {
+      color: #ffffff; }
+  .input--redline {
+    border-bottom: 1px solid red; }
+  .input-group--correct {
+    margin-top: 16px; }
 
 .policy__checkbox {
   opacity: 0;
@@ -875,7 +881,7 @@ nav, footer, header, aside {
   padding-top: 0; }
 
 .control__button {
-  padding: 18px 60px;
+  padding: 1.285rem 4.285rem;
   font-size: 1.1rem;
   letter-spacing: 1px; }
 
@@ -884,7 +890,7 @@ nav, footer, header, aside {
   justify-content: center;
   flex-basis: 100%;
   margin-top: 2.2rem;
-  padding-right: 75px; }
+  padding-right: 5.357rem; }
 
 .video__play {
   position: relative;
@@ -1182,11 +1188,15 @@ nav, footer, header, aside {
     display: flex;
     flex-direction: column; }
   .modal__input {
-    margin-bottom: 3.43rem;
-    background-color: transparent; }
-    .modal__input:last-of-type {
-      margin-bottom: -0.357rem; }
+    margin-bottom: 0.6rem; }
+    .modal__input-group {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 2.55rem; }
+      .modal__input-group--last {
+        margin-bottom: 0; }
   .modal__policy {
+    margin-top: -10px;
     margin-bottom: 2.7rem; }
   .modal__button {
     align-self: flex-end;
