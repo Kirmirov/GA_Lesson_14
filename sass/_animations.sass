@@ -1,0 +1,61 @@
+@keyframes arrivalUp
+  from
+    transform: translateY(-2000px);
+  60% 
+    opacity: 1
+    transform: translateY(30px)
+  80% 
+    transform: translateY(-10px)
+  100% 
+    transform: translateY(0)
+
+.arrivalUp
+  animation-name: arrivalUp
+  animation-duration: 2s
+
+
+@keyframes rotateLeft
+  from
+    transform-origin: left bottom
+    transform: rotate(-90deg)
+    opacity: 0
+  100% 
+    transform-origin: left bottom
+    transform: rotate(0)
+    opacity: 1
+
+.rotateLeft
+  animation-name: rotateLeft
+  animation-duration: 2s
+
+
+@keyframes callShake
+  form
+    transform: scale(1)
+  10%, 20%
+    transform: scale(0.9) rotate(-3deg)
+  30%, 50%, 70%, 90%
+    transform: scale(1.1) rotate(3deg)
+  40%, 60%, 80%
+    transform: scale(1.1) rotate(-3deg)
+  100%
+    transform: scale(1) rotate(0)
+
+.callShake
+  animation-name: callShake
+  animation-duration: 1s
+  animation-iteration-count: 3
+
+@keyframes arrivalLeft
+  from
+    transform: translateX(-2000px)
+  60%
+    transform: translateX(30px)
+  80%
+    transform: translateX(-10px)
+  100%
+    transform: translateX(0)
+
+.arrivalLeft
+  animation-name: arrivalLeft
+  animation-duration: 1s

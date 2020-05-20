@@ -541,6 +541,118 @@ nav, footer, header, aside {
   display: flexbox;
   padding-left: 4.7857rem; }
 
+@-webkit-keyframes arrivalUp {
+  from {
+    transform: translateY(-2000px); }
+  60% {
+    opacity: 1;
+    transform: translateY(30px); }
+  80% {
+    transform: translateY(-10px); }
+  100% {
+    transform: translateY(0); } }
+
+@keyframes arrivalUp {
+  from {
+    transform: translateY(-2000px); }
+  60% {
+    opacity: 1;
+    transform: translateY(30px); }
+  80% {
+    transform: translateY(-10px); }
+  100% {
+    transform: translateY(0); } }
+
+.arrivalUp {
+  -webkit-animation-name: arrivalUp;
+  animation-name: arrivalUp;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s; }
+
+@-webkit-keyframes rotateLeft {
+  from {
+    transform-origin: left bottom;
+    transform: rotate(-90deg);
+    opacity: 0; }
+  100% {
+    transform-origin: left bottom;
+    transform: rotate(0);
+    opacity: 1; } }
+
+@keyframes rotateLeft {
+  from {
+    transform-origin: left bottom;
+    transform: rotate(-90deg);
+    opacity: 0; }
+  100% {
+    transform-origin: left bottom;
+    transform: rotate(0);
+    opacity: 1; } }
+
+.rotateLeft {
+  -webkit-animation-name: rotateLeft;
+  animation-name: rotateLeft;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s; }
+
+@-webkit-keyframes callShake {
+  form {
+    transform: scale(1); }
+  10%, 20% {
+    transform: scale(0.9) rotate(-3deg); }
+  30%, 50%, 70%, 90% {
+    transform: scale(1.1) rotate(3deg); }
+  40%, 60%, 80% {
+    transform: scale(1.1) rotate(-3deg); }
+  100% {
+    transform: scale(1) rotate(0); } }
+
+@keyframes callShake {
+  form {
+    transform: scale(1); }
+  10%, 20% {
+    transform: scale(0.9) rotate(-3deg); }
+  30%, 50%, 70%, 90% {
+    transform: scale(1.1) rotate(3deg); }
+  40%, 60%, 80% {
+    transform: scale(1.1) rotate(-3deg); }
+  100% {
+    transform: scale(1) rotate(0); } }
+
+.callShake {
+  -webkit-animation-name: callShake;
+  animation-name: callShake;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-iteration-count: 3;
+  animation-iteration-count: 3; }
+
+@-webkit-keyframes arrivalLeft {
+  from {
+    transform: translateX(-2000px); }
+  60% {
+    transform: translateX(30px); }
+  80% {
+    transform: translateX(-10px); }
+  100% {
+    transform: translateX(0); } }
+
+@keyframes arrivalLeft {
+  from {
+    transform: translateX(-2000px); }
+  60% {
+    transform: translateX(30px); }
+  80% {
+    transform: translateX(-10px); }
+  100% {
+    transform: translateX(0); } }
+
+.arrivalLeft {
+  -webkit-animation-name: arrivalLeft;
+  animation-name: arrivalLeft;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s; }
+
 .header {
   position: fixed;
   left: 0;
@@ -726,14 +838,14 @@ nav, footer, header, aside {
     height: 100%;
     background-color: rgba(19, 19, 19, 0.8); }
 
-.control__text {
+.control__block-text {
   max-width: 38rem;
   margin: auto;
   margin-bottom: 4.285rem;
   text-align: center;
   font-size: 1.428rem;
   line-height: 2.429rem; }
-  .control__text::before {
+  .control__block-text::before {
     content: '';
     margin: auto;
     margin-bottom: 2rem;
@@ -793,13 +905,13 @@ nav, footer, header, aside {
   align-items: center; }
   .card__text {
     position: relative;
-    min-width: 23.6rem;
-    margin-top: -12rem;
+    min-width: 85%;
+    margin-top: -9rem;
     background-color: #ffffff;
     padding: 1.79rem 2.14rem;
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03); }
   .card__title {
-    margin-bottom: 0.7rem;
+    margin-bottom: 0.8rem;
     font-family: 'Yeseva One', cursive;
     font-size: 1.29rem;
     color: #131313; }
@@ -810,7 +922,7 @@ nav, footer, header, aside {
     font-size: 1.07rem;
     line-height: 1.79rem;
     color: #959595; }
-  .card__price {
+  .card__focus {
     position: absolute;
     left: 0;
     bottom: -2.14rem;
@@ -830,6 +942,10 @@ nav, footer, header, aside {
 
 .design__section-title {
   margin-bottom: 2.1rem; }
+
+.design__card-focus {
+  text-align: start;
+  padding: 17px 80px 17px 33px; }
 
 .sixfoots-top {
   margin-bottom: 1.07rem;
@@ -909,6 +1025,70 @@ nav, footer, header, aside {
   .slaid-titles__text {
     font-size: 1.07rem;
     line-height: 1.29rem; }
+
+.team__section {
+  height: 900px; }
+
+.team__title-text {
+  text-align: center;
+  font-size: 20px;
+  line-height: 27px;
+  margin-top: 23px;
+  margin-bottom: 85px; }
+
+.team__block-text {
+  max-width: 39rem;
+  margin: auto;
+  margin-top: 57px;
+  margin-bottom: 4.285rem;
+  text-align: center;
+  font-size: 1.428rem;
+  line-height: 2.429rem; }
+  .team__block-text::before {
+    content: '';
+    margin: auto;
+    margin-bottom: 0.7rem;
+    display: block;
+    width: 55px;
+    height: 2px;
+    border-radius: 30px;
+    background-color: #E3B873; }
+
+.card__team {
+  position: relative;
+  display: flex;
+  justify-content: center; }
+
+.card__bg-box {
+  position: absolute;
+  left: -34px;
+  top: -37px;
+  max-width: 70px;
+  max-height: 70px;
+  background-color: #E3B873; }
+
+.card__icon {
+  margin: 13px; }
+
+.card__text-team {
+  padding: 0;
+  padding-top: 22px;
+  text-align: center;
+  margin-top: -6rem; }
+
+.card__profession {
+  padding-bottom: 24px;
+  font-family: 'Futura Book', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  color: #959595; }
+
+.card__focus-exp {
+  position: initial;
+  bottom: -2.14rem;
+  padding: 14px 20px;
+  font-size: 13px; }
 
 .modal {
   opacity: 0;
@@ -1160,3 +1340,7 @@ nav, footer, header, aside {
     margin-top: 1.2rem;
     margin-bottom: 62px;
     color: #ffffff; } }
+
+@media screen and (max-width: 992px) {
+  .card__team {
+    align-items: center; } }
