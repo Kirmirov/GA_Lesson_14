@@ -410,7 +410,7 @@ nav, footer, header, aside {
     color: #ffffff;
     background-color: transparent; }
 
-.label--light {
+.lable--light {
   font-size: 1.07rem;
   color: rgba(255, 255, 255, 0.5); }
 
@@ -420,7 +420,8 @@ nav, footer, header, aside {
   opacity: 1;
   outline: none;
   border-bottom: 1px solid rgba(54, 54, 54, 0.3);
-  transition: opacity 0.3s ease; }
+  transition: opacity 0.3s ease;
+  background-color: transparent; }
   .input:focus::-webkit-input-placeholder {
     opacity: 0;
     -webkit-transition: opacity 0.3s ease;
@@ -469,6 +470,8 @@ nav, footer, header, aside {
     border: 1px solid #E3B873;
     border-radius: 1px;
     cursor: pointer; }
+  .policy__lable--center {
+    justify-content: center; }
 
 .scroll-up {
   display: inline-block;
@@ -592,8 +595,8 @@ nav, footer, header, aside {
 .rotateLeft {
   -webkit-animation-name: rotateLeft;
   animation-name: rotateLeft;
-  -webkit-animation-duration: 2s;
-  animation-duration: 2s; }
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s; }
 
 @-webkit-keyframes callShake {
   form {
@@ -868,10 +871,6 @@ nav, footer, header, aside {
   flex-basis: 30%;
   color: #131313; }
 
-.control__lable {
-  padding: 0;
-  margin-bottom: -7px; }
-
 .control__input {
   padding-top: 0; }
 
@@ -933,22 +932,24 @@ nav, footer, header, aside {
     background-color: #E3B873;
     color: #ffffff; }
 
-.design__title-text {
-  margin-bottom: 40px;
-  font-size: 1.43rem;
-  line-height: 27px;
-  text-align: center;
-  color: #131313; }
-
-.design__section-title {
-  margin-bottom: 2.1rem; }
-
-.design__card-focus {
-  text-align: start;
-  padding: 17px 80px 17px 33px; }
+.design {
+  padding-bottom: 32.14rem; }
+  .design__title-text {
+    margin-bottom: 2.857rem;
+    font-size: 1.43rem;
+    line-height: 1.928rem;
+    text-align: center;
+    color: #131313; }
+  .design__section-title {
+    margin-bottom: 2.1rem; }
+  .design__card-focus {
+    text-align: start;
+    padding: 17px 80px 17px 33px; }
 
 .sixfoots {
-  padding-bottom: 465px; }
+  padding-top: 28.57rem;
+  padding-bottom: 33.214rem;
+  margin-top: -60.857rem; }
   .sixfoots-top {
     margin-bottom: 1.07rem;
     font-family: 'Futura Book', sans-serif;
@@ -1024,7 +1025,8 @@ nav, footer, header, aside {
     line-height: 1.29rem; }
 
 .team {
-  margin-top: -32.5rem; }
+  margin-top: -32.5rem;
+  padding-bottom: 30rem; }
   .team__title-text {
     text-align: center;
     font-size: 1.43rem;
@@ -1088,6 +1090,52 @@ nav, footer, header, aside {
   bottom: -2.14rem;
   padding: 1rem 1.428rem;
   font-size: 0.928rem; }
+
+.footer {
+  background: #131313 url("../img/footer-bg.jpg") no-repeat center/cover;
+  padding-top: 3rem; }
+  .footer__wrap {
+    background-color: #181818;
+    max-width: 63.07rem;
+    margin: auto;
+    margin-top: -20rem;
+    padding: 2.5rem;
+    margin-bottom: 3.714rem;
+    color: #ffffff; }
+  .footer__title {
+    text-transform: uppercase;
+    font-family: 'Yeseva One', cursive;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.428rem;
+    text-align: center;
+    margin-bottom: 3.214rem; }
+  .footer__form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 37.142rem;
+    margin: auto; }
+  .footer__input-group {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 45%;
+    margin-bottom: 3.2rem; }
+    .footer__input-group--full-width {
+      flex-basis: 100%;
+      margin-bottom: 2.2rem; }
+  .footer__lable {
+    margin-bottom: -5px; }
+  .footer__policy {
+    flex-basis: 100%;
+    margin-bottom: 3.6rem;
+    padding-right: 25px; }
+  .footer__button {
+    margin: auto;
+    padding: 1.285rem 4.785rem; }
+  .footer__menu {
+    background-color: #131313;
+    padding: 3.428rem 0; }
 
 .modal {
   opacity: 0;
@@ -1342,6 +1390,8 @@ nav, footer, header, aside {
     flex-basis: 100%;
     margin-top: 1.2rem;
     margin-bottom: 62px;
+    color: #ffffff; }
+  .control__block-text {
     color: #ffffff; } }
 
 @media screen and (max-width: 1120px) {
@@ -1359,4 +1409,6 @@ nav, footer, header, aside {
   .team {
     background-color: #131313; }
     .team__block-text {
-      display: none; } }
+      display: none; }
+    .team__title-text {
+      margin-bottom: 40px; } }

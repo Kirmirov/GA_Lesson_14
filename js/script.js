@@ -134,7 +134,7 @@ $(document).ready(function() {
   });
 
   var cardGroupOne_point = $('#card-up1').offset().top;
-  var arrivalLeft_delay = 200;
+  var arrivalLeft_delay = 100;
   $(window).scroll(function() {
     if($(window).scrollTop() + window.innerHeight > cardGroupOne_point + arrivalLeft_delay){
       $('#card-up1').addClass('arrivalLeft');

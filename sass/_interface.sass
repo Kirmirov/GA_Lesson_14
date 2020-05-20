@@ -19,7 +19,7 @@
     color: $light
     background-color: transparent
 
-.label
+.lable
   &--light
     font-size: 1.07rem
     color: rgba($light, 0.5)
@@ -31,6 +31,7 @@
   outline: none
   border-bottom: 1px solid rgba(54, 54, 54, 0.3) 
   transition: opacity 0.3s ease
+  background-color: transparent
   &:focus::placeholder
     opacity: 0 
     transition: opacity 0.3s ease
@@ -58,6 +59,8 @@
       border: 1px solid $primary
       border-radius: 1px
       cursor: pointer
+    &--center
+      justify-content: center
 
 .scroll-up
   display: inline-block
