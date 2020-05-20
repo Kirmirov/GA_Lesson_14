@@ -19,7 +19,7 @@
     color: $light
     background-color: transparent
 
-.lable
+.label
   &--light
     font-size: 1.07rem
     color: rgba($light, 0.5)
@@ -45,17 +45,15 @@
     &--correct
       margin-top: 16px
 
-
-
 .policy
   &__checkbox
     opacity: 0
     visibility: hidden
     &:checked +
-      .policy__lable
+      .policy__label
         &::before
           background: $primary url('../img/check.svg') no-repeat center / 0.8rem
-  &__lable
+  &__label
     display: flex
     align-items: center
     font-size: 1.142rem

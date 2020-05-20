@@ -410,7 +410,7 @@ nav, footer, header, aside {
     color: #ffffff;
     background-color: transparent; }
 
-.lable--light {
+.label--light {
   font-size: 1.07rem;
   color: rgba(255, 255, 255, 0.5); }
 
@@ -461,14 +461,14 @@ nav, footer, header, aside {
 .policy__checkbox {
   opacity: 0;
   visibility: hidden; }
-  .policy__checkbox:checked + .policy__lable::before {
+  .policy__checkbox:checked + .policy__label::before {
     background: #E3B873 url("../img/check.svg") no-repeat center/0.8rem; }
 
-.policy__lable {
+.policy__label {
   display: flex;
   align-items: center;
   font-size: 1.142rem; }
-  .policy__lable::before {
+  .policy__label::before {
     content: '';
     margin-right: 0.64rem;
     width: 18px;
@@ -476,7 +476,7 @@ nav, footer, header, aside {
     border: 1px solid #E3B873;
     border-radius: 1px;
     cursor: pointer; }
-  .policy__lable--center {
+  .policy__label--center {
     justify-content: center; }
 
 .scroll-up {
@@ -1130,7 +1130,7 @@ nav, footer, header, aside {
     .footer__input-group--full-width {
       flex-basis: 100%;
       margin-bottom: 2.2rem; }
-  .footer__lable {
+  .footer__label {
     margin-bottom: -5px; }
   .footer__policy {
     flex-basis: 100%;
@@ -1366,7 +1366,7 @@ nav, footer, header, aside {
     color: #959595; }
     .control__input-group--up {
       margin-bottom: 63px; }
-  .control__lable {
+  .control__label {
     padding: 0;
     margin-bottom: -7px;
     font-size: 15px;

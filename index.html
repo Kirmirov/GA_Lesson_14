@@ -204,18 +204,18 @@
         </p>
         <form class="form control__form" action="#">
           <div class="input-group control__input-group control__input-group--up">
-            <lable class="lable control__lable" for="user-name">Имя</lable>
-            <input class="input control__input" name="userName" id="user-name" type="text" placeholder="Как вас зовут">
+            <label class="label control__label" for="user-nameCF">Имя</label>
+            <input class="input control__input" name="userName" id="user-nameCF" type="text" placeholder="Как вас зовут">
           </div>
           <div class="input-group control__input-group input-group--correct">
-            <lable class="lable control__lable" for="user-phone" type="tel">Телефон</lable>
-            <input class="input control__input" name="userPhone" id="user-phone" type="tel" placeholder="Ваш номер телефона">
+            <label class="label control__label" for="user-phoneCF" type="tel">Телефон</label>
+            <input class="input control__input" name="userPhone" id="user-phoneCF" type="tel" placeholder="Ваш номер телефона">
           </div>
           <button class="button button--primary control__button">Отправить</button>
           <div class="policy control__policy">
-            <input class="policy__checkbox" id="policy-checkbox" type="checkbox" name="policy-checkbox" checked>
-            <lable class="policy__lable contol__policy-lable" for="policy-checkbox">Я соглашаюсь с обработкой данных
-            </lable>
+            <input class="policy__checkbox" id="policy-checkboxCF" type="checkbox" name="policy-checkbox" checked>
+            <label class="policy__label contol__policy-label" for="policy-checkboxCF">Я соглашаюсь с обработкой данных
+            </label>
           </div>
         </form>
       </div>
@@ -614,23 +614,23 @@
         </h3>
         <form class="form footer__form" action="#">
           <div class="input-group footer__input-group">
-            <lable class="lable footer__lable lable--light" for="user-name">Имя</lable>
-            <input class="input footer__input input--light" name="userName" id="user-name" type="text" placeholder="Как вас зовут:">
+            <label class="label footer__label label--light" for="user-nameFF">Имя</label>
+            <input class="input footer__input input--light" name="userName" id="user-nameFF" type="text" placeholder="Как вас зовут:">
           </div>
           <div class="input-group footer__input-group input-group--correct">
-            <lable class="lable footer__lable lable--light" for="user-phone" type="tel">Телефон</lable>
-            <input class="input footer__input input--light" name="userPhone" id="user-phone" type="tel"
+            <label class="label footer__label label--light" for="user-phoneFF" type="tel">Телефон</label>
+            <input class="input footer__input input--light" name="userPhone" id="user-phoneFF" type="tel"
               placeholder="Ваш номер телефона:">
           </div>
           <div class="input-group footer__input-group footer__input-group--full-width">
-            <lable class="lable footer__lable lable--light" for="user-question">Вопрос</lable>
-            <input class="input footer__input input--light" name="userQuestion" id="user-question" type="text"
+            <label class="label footer__label label--light" for="user-questionFF">Вопрос</label>
+            <input class="input footer__input input--light" name="userQuestion" id="user-questionFF" type="text"
               placeholder="Я хочу спросить:">
           </div>
           <div class="policy footer__policy">
-            <input class="policy__checkbox" type="checkbox" name="policy-checkbox" checked>
-            <lable class="policy__lable policy__lable--center" for="policy-checkbox">Я соглашаюсь с обработкой данных
-            </lable>
+            <input class="policy__checkbox" type="checkbox" name="policy-checkbox" id="policy-checkboxFF" checked>
+            <label class="policy__label policy__label--center" for="policy-checkboxFF">Я соглашаюсь с обработкой данных
+            </label>
           </div>
           <button class="button button--primary footer__button">Отправить</button>
         </form>
@@ -658,26 +658,27 @@
       </div>
     </div>
   </footer>
+  <!-- МОДАЛЬНОЕ ОКНО -->
   <div class="modal">
     <div class="modal__dialog">
       <button class="modal__close"></button>
       <h3 class="modal__title">Оставьте заявку и наш менеджер свяжется с вами</h3>
       <form class="form modal__form" action="#">
         <div class="input-group modal__input-group">
-          <lable class="lable modal__lable lable--light" for="user-name">Имя</lable>
-          <input class="input modal__input input--light" name="userName" id="user-name" type="text" placeholder="Как вас зовут">
+          <label class="label modal__label label--light" for="user-nameMF">Имя</label>
+          <input class="input modal__input input--light" name="userName" id="user-nameMF" type="text" placeholder="Как вас зовут">
         </div>
         <div class="input-group modal__input-group">
-          <lable class="lable modal__lable lable--light" for="user-phone">Телефон</lable>
-          <input class="input modal__input input--light" name="userPhone" id="user-phone" type="tel" placeholder="Ваш номер телефона">
+          <label class="label modal__label label--light" for="user-phoneMF">Телефон</label>
+          <input class="input modal__input input--light" name="userPhone" id="user-phoneMF" type="tel" placeholder="Ваш номер телефона">
         </div>
         <div class="input-group modal__input-group modal__input-group--last">
-          <lable class="lable modal__lable lable--light" for="user-email">Email</lable>
-          <input class="input modal__input input--light" name="userEmail" id="user-email" type="email" placeholder="Ваш email:">
+          <label class="label modal__label label--light" for="user-emailMF">Email</label>
+          <input class="input modal__input input--light" name="userEmail" id="user-emailMF" type="email" placeholder="Ваш email:">
         </div>
         <div class="policy modal__policy">
-          <input class="policy__checkbox" type="checkbox" name="policy-checkbox" checked>
-          <lable class="policy__lable" for="policy-checkbox">Я соглашаюсь с обработкой данных</lable>
+          <input class="policy__checkbox" type="checkbox" name="policy-checkbox" id="policy-checkboxMF" checked>
+          <label class="policy__label" for="policy-checkboxMF">Я соглашаюсь с обработкой данных</label>
         </div>
         <button class="button button--primary modal__button">Отправить заявку</button>
       </form>

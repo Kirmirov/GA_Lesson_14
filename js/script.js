@@ -153,7 +153,6 @@ $(document).ready(function() {
     }
   });
 // Валидатор
-
   $('.modal__form').validate({
     errorClass: "invalid",
     highlight: function(element, errorClass) {
