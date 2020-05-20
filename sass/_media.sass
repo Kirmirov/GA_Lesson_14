@@ -67,6 +67,11 @@
     &__text
       margin-right: 1.5rem
 
+// отступ от секции team на мобильных версиях
+@media screen and ( max-width: 991px )
+  .design
+    padding-bottom: 340px
+
 @media screen and ( max-width: 570px )
   .contacts
     &__button
@@ -203,7 +208,21 @@
 
 // team section
 
+@media screen and ( max-width: 1120px )
+  .card
+    &__bg-box
+      left: -1.428rem
+      top: -1.642rem
+
 @media screen and ( max-width: 992px )
   .card
     &__team
       align-items: center
+    &__text-team
+      margin-top: -6.8rem
+
+@media screen and ( max-width: 991px )
+  .team
+    background-color: $dark
+    &__block-text
+      display: none
