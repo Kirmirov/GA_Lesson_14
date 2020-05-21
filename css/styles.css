@@ -1172,6 +1172,13 @@ nav, footer, header, aside {
     font-size: 1.428rem;
     text-align: center;
     margin-bottom: 3.214rem; }
+    .footer__title-content {
+      max-width: 500px;
+      line-height: 28px;
+      text-align: center;
+      margin: auto;
+      margin-bottom: 21px;
+      color: #E3B873; }
   .footer__form {
     display: flex;
     flex-wrap: wrap;
@@ -1198,6 +1205,17 @@ nav, footer, header, aside {
   .footer__menu {
     background-color: #131313;
     padding: 3.428rem 0; }
+  .footer__icons {
+    display: flex;
+    justify-content: space-between;
+    max-width: 6rem;
+    margin: auto;
+    margin-bottom: 3.07rem; }
+  .footer__map {
+    max-width: 66.07rem;
+    min-height: 33.21rem;
+    margin: auto;
+    margin-bottom: 4.642rem; }
 
 .modal {
   opacity: 0;
@@ -1483,3 +1501,42 @@ nav, footer, header, aside {
 @media screen and (max-width: 991px) {
   .clients {
     display: none; } }
+
+@media screen and (max-width: 600px) {
+  .footer {
+    background: #131313; }
+    .footer__wrap {
+      background-color: #131313;
+      padding: 0; }
+    .footer__title {
+      font-size: 1.428rem;
+      margin-bottom: 3.643rem; }
+    .footer__input-group {
+      margin-bottom: 4.57rem; }
+      .footer__input-group--full-width {
+        margin-bottom: 0.57rem; }
+    .footer__label {
+      margin-bottom: 0; }
+    .footer__policy {
+      padding-right: 7.714rem;
+      margin-bottom: 5.6rem; }
+    .footer__button {
+      padding: 1.14rem 10.785rem;
+      font-size: 1.07rem; }
+    .footer__map {
+      width: 150px;
+      height: 50px; }
+    .footer__down {
+      display: flex;
+      flex-direction: column; }
+    .footer__menu {
+      display: none; }
+    .footer__icons {
+      order: 5; }
+      .footer__icons-img {
+        width: 39px;
+        height: 39px; }
+    .footer__adress {
+      order: 4; }
+    .footer__input-group {
+      flex-basis: 100%; } }
