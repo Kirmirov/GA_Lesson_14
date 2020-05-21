@@ -453,8 +453,10 @@ nav, footer, header, aside {
       color: #ffffff; }
     .input--light::placeholder {
       color: #ffffff; }
-  .input--redline {
+  .input--error {
     border-bottom: 1px solid red; }
+  .input--success {
+    border-bottom: 1px solid #E3B873; }
 
 .policy__checkbox {
   opacity: 0;

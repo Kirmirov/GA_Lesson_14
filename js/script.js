@@ -126,40 +126,100 @@ $(document).ready(function() {
       $('#card-up6').addClass('arrivalLeft');
     }
   });
-// Валидатор
-  $('#modalF').validate({
-    highlight: function(element) {
-      $(element).addClass('input--redline');
+// ВАЛИДАТОРЫ
+$('#modalF').validate({
+  highlight: function(element) {
+    $(element).removeClass('input--success');
+    $(element).addClass('input--error');
+  },
+  unhighlight: function(element) {
+    $(element).removeClass('input--error');
+    $(element).addClass('input--success');
+  },
+  errorClass: "invalid",
+  rules: {
+    userNameMF: {
+      required: true,
+      minlength: 2,
+      maxlength: 15
     },
-    rules:{
-      userNameMF: {
-        required: true,
-        minlenght: 2,
-        maxlength: 15,
-      },
-      userPhoneMF: {
-        required: true,
-      },
-      userEmailMF: {
-        required: true,
-        email: true,
-      },
-    },
-    errorElement: "div",
+    userPhoneMF: "required",
+    userEmailMF: "required"
+  },
+  errorElement: "div",
     messages: {
       userNameMF: {
-        minlenght: "Пожалуйста, укажите полное имя",
         required: "Пожалуйста, укажите Ваше имя",
+        minlength: "Пожалуйста, укажите полное имя",
+        maxlength: "Имя не должно превышать 15 символов"
       },
-      userPhoneMF: {
-        required: "Пожалуйта, укажите контакный телефон",     
-      },
+      userPhoneMF: "Пожалуйта, укажите контакный номер",
       userEmailMF: {
         required: "Пожалуйста, укажите свой электронный адрес",
         email: "Пожалуйста укажите свой адрес в формате name@domain.com"
-      }
+      },
     }
-  });
+});
+
+$('#footerF').validate({
+  highlight: function(element) {
+    $(element).removeClass('input--success');
+    $(element).addClass('input--error');
+  },
+  unhighlight: function(element) {
+    $(element).removeClass('input--error');
+    $(element).addClass('input--success');
+  },
+  errorClass: "invalid",
+  rules: {
+    userNameFF: {
+      required: true,
+      minlength: 2,
+      maxlength: 15
+    },
+    userPhoneFF: "required",
+    userQuestionFF: "required"
+  },
+  errorElement: "div",
+    messages: {
+      userNameFF: {
+        required: "Пожалуйста, укажите Ваше имя",
+        minlength: "Пожалуйста, укажите полное имя",
+        maxlength: "Имя не должно превышать 15 символов"
+      },
+      userPhoneFF: "Пожалуйта, укажите контакный номер",
+      userQuestionFF: "Пожалуйста, заполните это поле",
+    }
+});
+
+$('#controlF').validate({
+  highlight: function(element) {
+    $(element).removeClass('input--success');
+    $(element).addClass('input--error');
+  },
+  unhighlight: function(element) {
+    $(element).removeClass('input--error');
+    $(element).addClass('input--success');
+  },
+  errorClass: "invalid",
+  rules: {
+    userNameCF: {
+      required: true,
+      minlength: 2,
+      maxlength: 15
+    },
+    userPhoneCF: "required"
+  },
+  errorElement: "div",
+    messages: {
+      userNameCF: {
+        required: "Пожалуйста, укажите Ваше имя",
+        minlength: "Пожалуйста, укажите полное имя",
+        maxlength: "Имя не должно превышать 15 символов"
+      },
+      userPhoneCF: "Пожалуйта, укажите контакный номер",
+    }
+});
 
   $('[type=tel]').mask("+7(000) 000-00-00", {placeholder: "+7(000) 000-00-00"});
 
