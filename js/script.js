@@ -37,35 +37,9 @@ $(document).ready(function() {
     $('html, body').animate({scrollTop:0}, '300');
   });
 
+// Слайдеры
   const sliderTop = $('.swiper-container');
   const slideBot = $('.swiper-containerbot');
-
-  var mySwiperTop = new Swiper (sliderTop, {
-    loop: true,
-    spaceBetween: 15,
-    pagination: {
-      el: '.swiper-pagination',
-      type: 'bullets',
-    },
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-  });
-
-  var mySwiperBot = new Swiper (slideBot, {
-    loop: true,
-    slaidersPerView: 1,
-    spaceBetween: 30,
-    pagination: {
-      el: '.pagination-bot',
-      type: 'bullets',
-    },
-    navigation: {
-      nextEl: '.btnBotR',
-      prevEl: '.btnBotL',
-    },
-  });
 
   var btnRight = $('.swiper-button-next');
   var btnLeft = $('.swiper-button-prev');
@@ -79,7 +53,7 @@ $(document).ready(function() {
   btnRight.css('left', btnLeft.width() + 26 + bullets.width() + 13);
   bullets.css('left', btnLeft.width() + 26);
 
-  // Очень страшный кадавр отвечающий за переключенеи фокуса титулов
+  // Очень страшный кадавр отвечающий за переключенеи фокуса титулов в секции 6 шагов
   var titlesList = $('.slaid-titles__box');
   var index = 1;
   $(document).click(function (e){
@@ -153,40 +127,39 @@ $(document).ready(function() {
     }
   });
 // Валидатор
-  $('.modal__form').validate({
-    errorClass: "invalid",
-    highlight: function(element, errorClass) {
+  $('#modalF').validate({
+    highlight: function(element) {
       $(element).addClass('input--redline');
     },
-    validClass: "success",
-    errorElement: "div",
-    rules: {
-      userName: {
+    rules:{
+      userNameMF: {
         required: true,
-        minlenght: 2
+        minlenght: 2,
+        maxlength: 15,
       },
-      userPhone: {
+      userPhoneMF: {
         required: true,
       },
-      userEmail: {
+      userEmailMF: {
         required: true,
-        email: true
-      }
+        email: true,
+      },
     },
+    errorElement: "div",
     messages: {
-      userName: {
+      userNameMF: {
+        minlenght: "Пожалуйста, укажите полное имя",
         required: "Пожалуйста, укажите Ваше имя",
-        minlenght: "Пожалуйста, укажите полное имя"
       },
-      userPhone: {
+      userPhoneMF: {
         required: "Пожалуйта, укажите контакный телефон",     
       },
-      userEmail: {
+      userEmailMF: {
         required: "Пожалуйста, укажите свой электронный адрес",
         email: "Пожалуйста укажите свой адрес в формате name@domain.com"
       }
     }
   });
 
-  $('[type=tel]').mask('0000-0000', {placeholder: "+7(__) __-__-___"});
+  $('[type=tel]').mask("+7(000) 000-00-00", {placeholder: "+7(000) 000-00-00"});
 });

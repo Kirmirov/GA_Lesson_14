@@ -455,8 +455,6 @@ nav, footer, header, aside {
       color: #ffffff; }
   .input--redline {
     border-bottom: 1px solid red; }
-  .input-group--correct {
-    margin-top: 16px; }
 
 .policy__checkbox {
   opacity: 0;
@@ -900,10 +898,6 @@ nav, footer, header, aside {
   margin-bottom: 2.1rem;
   color: #131313; }
 
-.box-align-center {
-  display: flex;
-  justify-content: center; }
-
 .card {
   display: flex;
   flex-direction: column;
@@ -1032,7 +1026,7 @@ nav, footer, header, aside {
 
 .team {
   margin-top: -32.5rem;
-  padding-bottom: 30rem; }
+  padding-bottom: 5rem; }
   .team__title-text {
     text-align: center;
     font-size: 1.43rem;
@@ -1096,6 +1090,68 @@ nav, footer, header, aside {
   bottom: -2.14rem;
   padding: 1rem 1.428rem;
   font-size: 0.928rem; }
+
+.clients__section {
+  padding: 0;
+  padding-bottom: 500px; }
+
+.clients__title-text {
+  margin-top: 1.714rem;
+  margin-bottom: 4.57rem;
+  font-size: 1.428rem;
+  text-align: center;
+  line-height: 2rem; }
+
+.clients__data {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.1428rem; }
+
+.clients__photo {
+  min-width: 5.428rem;
+  min-height: 5.428rem;
+  border-radius: 50%;
+  -o-object-fit: cover;
+  object-fit: cover; }
+
+.clients__name {
+  padding-left: 1.5rem;
+  font-family: 'Yeseva One', cursive;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.286rem;
+  line-height: 1.64rem;
+  color: #181818; }
+
+.clients__review {
+  max-width: 22.857rem;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.07rem;
+  line-height: 180%;
+  color: #959595; }
+
+.clients__focus-square {
+  display: flex;
+  align-items: center;
+  bottom: -7.14rem;
+  left: -0.429rem;
+  padding: 0.7857rem 1.214rem;
+  font-size: 1.214rem;
+  text-transform: unset; }
+
+.clients__focus-days {
+  display: flex;
+  align-items: center;
+  left: 9.07rem;
+  bottom: -7.14rem;
+  padding: 0.7857rem 1.214rem;
+  padding-right: 1.78rem;
+  font-size: 1.214rem;
+  text-transform: unset; }
+
+.clients__focus-text {
+  margin-left: 1.07rem; }
 
 .footer {
   background: #131313 url("../img/footer-bg.jpg") no-repeat center/cover;
@@ -1240,7 +1296,7 @@ nav, footer, header, aside {
       color: #ffffff; }
     .design__section-title {
       color: #ffffff; }
-  .box-align-center {
+  .box-content {
     margin-bottom: 7rem; }
   .card {
     align-items: start; }
@@ -1417,8 +1473,13 @@ nav, footer, header, aside {
 
 @media screen and (max-width: 991px) {
   .team {
+    padding-bottom: 180px;
     background-color: #131313; }
     .team__block-text {
       display: none; }
     .team__title-text {
       margin-bottom: 40px; } }
+
+@media screen and (max-width: 991px) {
+  .clients {
+    display: none; } }

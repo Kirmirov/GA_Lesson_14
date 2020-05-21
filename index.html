@@ -202,14 +202,16 @@
           зайти на наш сайт и следить за ходом работы в вашей квартире. Посмотрите прямую трансляцию с одного из наших
           объектов! Оставьте заявку ниже чтобы получить ссылку на трансляцию.
         </p>
-        <form class="form control__form" action="#">
+        <form class="form control__form" id="controlF" action="#">
           <div class="input-group control__input-group control__input-group--up">
             <label class="label control__label" for="user-nameCF">Имя</label>
-            <input class="input control__input" name="userName" id="user-nameCF" type="text" placeholder="Как вас зовут">
+            <input class="input control__input" name="userName" id="user-nameCF" type="text"
+              placeholder="Как вас зовут">
           </div>
-          <div class="input-group control__input-group input-group--correct">
-            <label class="label control__label" for="user-phoneCF" type="tel">Телефон</label>
-            <input class="input control__input" name="userPhone" id="user-phoneCF" type="tel" placeholder="Ваш номер телефона">
+          <div class="input-group control__input-group">
+            <label class="label control__label" for="user-phoneCF">Телефон</label>
+            <input class="input control__input" name="userPhone" id="user-phoneCF" type="tel"
+              placeholder="Ваш номер телефона">
           </div>
           <button class="button button--primary control__button">Отправить</button>
           <div class="policy control__policy">
@@ -231,8 +233,8 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-12 col-lg-4">
-            <div class="box-align-center types__box-align-center">
+          <div class="col-12 col-lg-4 d-flex justify-content-center">
+            <div class="box-content types__box-content">
               <div class="card">
                 <img class="card__img" src="img/types_row/1.jpg" alt="">
                 <div class="card__text">
@@ -251,8 +253,8 @@
               </div>
             </div>
           </div>
-          <div class="col-12 col-lg-4">
-            <div class="box-align-center types__box-align-center">
+          <div class="col-12 col-lg-4 d-flex justify-content-center">
+            <div class="box-content types__box-content">
               <div class="card">
                 <img class="card__img" src="img/types_row/2.jpg" alt="">
                 <div class="card__text">
@@ -271,8 +273,8 @@
               </div>
             </div>
           </div>
-          <div class="col-md-12 col-lg-4">
-            <div class="box-align-center types__box-align-center">
+          <div class="col-md-12 col-lg-4 d-flex justify-content-center">
+            <div class="box-content types__box-content">
               <div class="card">
                 <img class="card__img" src="img/types_row/3.jpg" alt="">
                 <div class="card__text">
@@ -313,8 +315,8 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-12 col-lg-4">
-            <div class="box-align-center design__box-align-center">
+          <div class="col-12 col-lg-4 d-flex justify-content-center">
+            <div class="box-content design__box-content">
               <div class="card">
                 <img class="card__img" src="img/types_row/1.jpg" alt="">
                 <div class="card__text">
@@ -330,8 +332,8 @@
               </div>
             </div>
           </div>
-          <div class="col-12 col-lg-4">
-            <div class="box-align-center types__box-align-center">
+          <div class="col-12 col-lg-4 d-flex justify-content-center">
+            <div class="box-content types__box-content">
               <div class="card">
                 <img class="card__img" src="img/types_row/3.jpg" alt="">
                 <div class="card__text">
@@ -350,8 +352,8 @@
               </div>
             </div>
           </div>
-          <div class="col-md-12 col-lg-4">
-            <div class="box-align-center types__box-align-center">
+          <div class="col-md-12 col-lg-4 d-flex justify-content-center">
+            <div class="box-content types__box-content">
               <div class="card">
                 <img class="card__img" src="img/types_row/4.jpg" alt="">
                 <div class="card__text">
@@ -552,8 +554,8 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-12 col-lg-4 d-flex-justify-content-end-pr-5">
-            <div class="box-align-center team__box-align-center">
+          <div class="col-12 col-lg-4 d-flex justify-content-center">
+            <div class="box-content team__box-content">
               <div class="card card__team">
                 <div class="card__bg-box">
                   <img class="card__icon" src="img/team/brain.svg" alt="">
@@ -567,8 +569,8 @@
               </div>
             </div>
           </div>
-          <div class="col-12 col-lg-4 d-flex-justify-content-center">
-            <div class="box-align-center team__box-align-center">
+          <div class="col-12 col-lg-4 d-flex justify-content-center">
+            <div class="box-content team__box-content">
               <div class="card card__team">
                 <div class="card__bg-box">
                   <img class="card__icon" src="img/team/write.svg" alt="">
@@ -582,8 +584,8 @@
               </div>
             </div>
           </div>
-          <div class="col-12 col-lg-4 d-flex-justify-content-start-pl-5">
-            <div class="box-align-center team__box-align-center">
+          <div class="col-12 col-lg-4 d-flex justify-content-center ">
+            <div class="box-content team__box-content">
               <div class="card card__team">
                 <div class="card__bg-box">
                   <img class="card__icon" src="img/team/bag.svg" alt="">
@@ -604,6 +606,83 @@
         </p>
       </div>
     </section>
+    <!-- Секция КЛИЕНТЫ -->
+    <section class="section clients clients__section">
+      <div class="container">
+        <div class="section-title">
+          <h2 class="section-title__heading">Наши клиенты</h2>
+          <div class="section-title__image">
+            <img src="img/section_titles/5.svg" alt="hands">
+          </div>
+        </div>
+        <div class="row d-flex justify-content-center">
+          <div class="col-8 col-sm-4">
+            <div class="title-text clients__title-text ">
+              <p>80% наших клиентов рекомендуют нас своим знакомым и друзьям</p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 col-lg-4">
+            <div class="box-content clients__box-content">
+              <div class="clients__data">
+                <img class="clients__photo" src="img/clients/woman-1.jpg" alt="">
+                <h3 class="clients__name">Савельева <br> Екатерина Львовна</h3>
+              </div>
+              <p class="clients__review">
+                Я хочу поблагодарить ребят за их работу. Они вложили душу в ремонт. Я очень благодарна, что сделали как для самих себя. Большое спасибо, я выражаю проектному менеджеру за его профессионализм и подход. Процесс ремонта был завершен быстрее, чем ожидалось. Команда мобильная и профессиональная. Работы выполнены качественно без нареканий. Цены демократические. Я рекомендую этих мастеров.
+              </p>
+                <div class="card__focus clients__focus-square">
+                  <img class="focus-square" src="img/clients/square.svg" alt="">
+                  <p class="clients__focus-text">40 М<sup>2</sup></p>
+                </div>
+                <div class="card__focus clients__focus-days">
+                  <img class="focus-days" src="img/clients/note.svg" alt="">
+                  <p class="clients__focus-text">48 дней</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-4">
+            <div class="box-content clients__box-content">
+              <div class="clients__data">
+                <img class="clients__photo" src="img/clients/man-2.jpg" alt="">
+                <h3 class="clients__name">Савельева <br> Екатерина Львовна</h3>
+              </div>
+              <p class="clients__review">
+                Я хочу поблагодарить ребят за их работу. Они вложили душу в ремонт. Я очень благодарен, что сделали как для самих себя. Большое спасибо, я выражаю проектному менеджеру за его профессионализм и подход. Процесс ремонта был завершен быстрее, чем ожидалось. Команда мобильная и профессиональная. Работы выполнены качественно без нареканий. Качество высокое. Я рекомендую этих мастеров.
+              </p>
+                <div class="card__focus clients__focus-square">
+                  <img class="focus-square" src="img/clients/square.svg" alt="">
+                  <p class="clients__focus-text">40 М<sup>2</sup></p>
+                </div>
+                <div class="card__focus clients__focus-days">
+                  <img class="focus-days" src="img/clients/note.svg" alt="">
+                  <p class="clients__focus-text">48 дней</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-4">
+            <div class="box-content clients__box-content">
+              <div class="clients__data">
+                <img class="clients__photo" src="img/clients/man-3.jpg" alt="">
+                <h3 class="clients__name">Савельева <br> Екатерина Львовна</h3>
+              </div>
+              <p class="clients__review">
+                Я хочу поблагодарить ребят за их работу. Они вложили душу в ремонт. Я очень благодарен, что сделали как для самих себя. Большое спасибо, я выражаю проектному менеджеру за его профессионализм и подход. Процесс ремонта был завершен быстрее, чем ожидалось. Команда мобильная и профессиональная. Работы выполнены качественно без нареканий. Качество высокое. Цены демократические.
+              </p>
+                <div class="card__focus clients__focus-square">
+                  <img class="focus-square" src="img/clients/square.svg" alt="">
+                  <p class="clients__focus-text">40 М<sup>2</sup></p>
+                </div>
+                <div class="card__focus clients__focus-days">
+                  <img class="focus-days" src="img/clients/note.svg" alt="">
+                  <p class="clients__focus-text">48 дней</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
   <!-- Секция ФУТЕР -->
   <footer class="footer section--dark">
@@ -612,13 +691,14 @@
         <h3 class="footer__title">
           Остались вопросы?
         </h3>
-        <form class="form footer__form" action="#">
+        <form class="form footer__form" id="foterF" action="#">
           <div class="input-group footer__input-group">
             <label class="label footer__label label--light" for="user-nameFF">Имя</label>
-            <input class="input footer__input input--light" name="userName" id="user-nameFF" type="text" placeholder="Как вас зовут:">
+            <input class="input footer__input input--light" name="userName" id="user-nameFF" type="text"
+              placeholder="Как вас зовут:">
           </div>
-          <div class="input-group footer__input-group input-group--correct">
-            <label class="label footer__label label--light" for="user-phoneFF" type="tel">Телефон</label>
+          <div class="input-group footer__input-group">
+            <label class="label footer__label label--light" for="user-phoneFF">Телефон</label>
             <input class="input footer__input input--light" name="userPhone" id="user-phoneFF" type="tel"
               placeholder="Ваш номер телефона:">
           </div>
@@ -663,24 +743,27 @@
     <div class="modal__dialog">
       <button class="modal__close"></button>
       <h3 class="modal__title">Оставьте заявку и наш менеджер свяжется с вами</h3>
-      <form class="form modal__form" action="#">
+      <form class="form modal__form" id="modalF" action="#">
         <div class="input-group modal__input-group">
-          <label class="label modal__label label--light" for="user-nameMF">Имя</label>
-          <input class="input modal__input input--light" name="userName" id="user-nameMF" type="text" placeholder="Как вас зовут">
+          <label class="label modal__label label--light" for="usernameMF">Имя</label>
+          <input class="input modal__input input--light" name="userNameMF" id="usernameMF" type="text"
+            autocomplete="off" placeholder="Как вас зовут">
         </div>
         <div class="input-group modal__input-group">
           <label class="label modal__label label--light" for="user-phoneMF">Телефон</label>
-          <input class="input modal__input input--light" name="userPhone" id="user-phoneMF" type="tel" placeholder="Ваш номер телефона">
+          <input class="input modal__input input--light" name="userPhoneMF" id="user-phoneMF" type="tel"
+            autocomplete="off" placeholder="Ваш номер телефона">
         </div>
         <div class="input-group modal__input-group modal__input-group--last">
           <label class="label modal__label label--light" for="user-emailMF">Email</label>
-          <input class="input modal__input input--light" name="userEmail" id="user-emailMF" type="email" placeholder="Ваш email:">
+          <input class="input modal__input input--light" name="userEmailMF" id="user-emailMF" type="email"
+            autocomplete="off" placeholder="Ваш email:">
         </div>
         <div class="policy modal__policy">
-          <input class="policy__checkbox" type="checkbox" name="policy-checkbox" id="policy-checkboxMF" checked>
+          <input class="policy__checkbox" type="checkbox" name="policy-checkboxMF" id="policy-checkboxMF" checked>
           <label class="policy__label" for="policy-checkboxMF">Я соглашаюсь с обработкой данных</label>
         </div>
-        <button class="button button--primary modal__button">Отправить заявку</button>
+        <button class="button button--primary modal__button" form="modalF">Отправить заявку</button>
       </form>
     </div>
   </div>
@@ -688,7 +771,7 @@
     integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
   <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
   <script src="js/wow.min.js"></script>
-  <script src="js/jquery.validate.min.js"></script>
+  <script src="js/jquery.validate.js"></script>
   <script src="js/jquery.mask.min.js"></script>
   <script src="js/script.js"></script>
 </body>
