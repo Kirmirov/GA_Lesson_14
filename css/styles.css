@@ -1204,9 +1204,8 @@ nav, footer, header, aside {
   .footer__label {
     margin-bottom: -5px; }
   .footer__policy {
-    flex-basis: 100%;
     margin-bottom: 3.6rem;
-    padding-right: 25px; }
+    margin-left: 8.357rem; }
   .footer__button {
     margin: auto;
     padding: 1.285rem 4.785rem; }
@@ -1526,10 +1525,11 @@ nav, footer, header, aside {
     .footer__label {
       margin-bottom: 0; }
     .footer__policy {
-      padding-right: 7.714rem;
+      margin-left: 0;
       margin-bottom: 5.6rem; }
     .footer__button {
-      padding: 1.14rem 10.785rem;
+      padding: 1.14rem 0;
+      width: 100%;
       font-size: 1.07rem; }
     .footer__map {
       width: 150px;

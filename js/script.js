@@ -41,13 +41,39 @@ $(document).ready(function() {
   const sliderTop = $('.swiper-container');
   const slideBot = $('.swiper-containerbot');
 
+  var mySwiperTop = new Swiper (sliderTop, {
+    loop: true,
+    spaceBetween: 15,
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'bullets',
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+
+  var mySwiperBot = new Swiper (slideBot, {
+    loop: true,
+    slaidersPerView: 1,
+    spaceBetween: 30,
+    pagination: {
+      el: '.pagination-bot',
+      type: 'bullets',
+    },
+    navigation: {
+      nextEl: '.btnBotR',
+      prevEl: '.btnBotL',
+    },
+  });
+
   var btnRight = $('.swiper-button-next');
   var btnLeft = $('.swiper-button-prev');
   var bullets = $('.swiper-pagination-bullets');
   var bullet = $('.swiper-pagination-bullet');
   var btnBotR = $('.btnBotR');
   var btnBotL = $('.btnBotL');
-
 
   bullet.css('margin-right', 16);
   btnRight.css('left', btnLeft.width() + 26 + bullets.width() + 13);
@@ -79,10 +105,10 @@ $(document).ready(function() {
     }
   });
 
-      $('.hero__title').addClass('arrivalUp');
-      $('.hero__text').addClass('arrivalUp');
-      $('.hero__button').addClass('arrivalUp');
-      $('.hero__button').addClass('arrivalUp');
+  $('.hero__title').addClass('arrivalUp');
+  $('.hero__text').addClass('arrivalUp');
+  $('.hero__button').addClass('arrivalUp');
+  $('.hero__button').addClass('arrivalUp');
 
   var heroScroll_point = $('.hero__scroll-down').offset().top;
   $(window).scroll(function() {
