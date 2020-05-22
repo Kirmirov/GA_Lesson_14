@@ -18,6 +18,7 @@
     border-radius: 50%
     object-fit: cover
   &__name
+    max-width: 14.71rem
     padding-left: 1.5rem
     font-family: 'Yeseva One', cursive
     font-style: normal
@@ -26,29 +27,33 @@
     line-height: 1.64rem
     color: $black
   &__review
+    margin-bottom: 3.57rem
     max-width: 22.857rem
     font-style: normal
     font-weight: normal
     font-size: 1.07rem
     line-height: 180%
     color: $secondary
-  &__focus
+  &__focus 
+    &-box
+      display: flex
+      margin-left: -20px
     &-square
+      padding: 0
       display: flex
+      position: static
       align-items: center
-      bottom: -7.14rem
-      left: -0.429rem
-      padding: 0.7857rem 1.214rem
       font-size: 1.214rem
       text-transform: unset
+      padding: 11px 17px 11px 15px
     &-days
+      padding: 0
       display: flex
+      position: static
       align-items: center
-      left: 9.07rem
-      bottom: -7.14rem
-      padding: 0.7857rem 1.214rem
-      padding-right: 1.78rem
       font-size: 1.214rem
       text-transform: unset
+      padding: 11px 24px 11px 21px
+      margin-left: 2px
     &-text
       margin-left: 1.07rem
