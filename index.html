@@ -45,14 +45,14 @@
       </div>
       <div class="container">
         <div class="hero__content">
-          <h1 class="hero__title">Турецкий ремонт в&nbsp;<span class="hero__title--primary">Ростове-на-Дону</span></h1>
-          <p class="hero__text">Получите готовый ремонт под ключ в срок с экономией работчего времени до 45 дней и 20%
+          <h1 class="hero__title wow fadeInDownBig" data-wow-delay="0.8s">Турецкий ремонт в&nbsp;<span class="hero__title--primary">Ростове-на-Дону</span></h1>
+          <p class="hero__text wow fadeInDownBig" data-wow-delay="0.7s">Получите готовый ремонт под ключ в срок с экономией работчего времени до 45 дней и 20%
             от стоимости материалов за счет организации работы</p>
-          <button class="button hero__button button--primary">Расчитать стоимость</button>
-          <button class="button hero__button button--outline">Отправить заявку</button>
+          <button class="button hero__button button--primary wow fadeInDownBig" data-wow-delay="0.6s">Расчитать стоимость</button>
+          <button class="button hero__button button--outline wow fadeInDownBig" data-wow-delay="0.5s">Отправить заявку</button>
         </div>
       </div>
-      <a class="hero__scroll-down" href="#">Листайте вниз</a>
+      <a class="hero__scroll-down wow rotateInDownLeft" href="#" data-wow-delay="1.5s">Листайте вниз</a>
     </section>
     <!-- Секция ПРОЕКТЫ -->
     <section class="section project section--dark">
@@ -202,7 +202,7 @@
           зайти на наш сайт и следить за ходом работы в вашей квартире. Посмотрите прямую трансляцию с одного из наших
           объектов! Оставьте заявку ниже чтобы получить ссылку на трансляцию.
         </p>
-        <form class="form control__form" id="controlF" action="#">
+        <form class="form control__form" id="controlF" action="send.php" method="POST">
           <div class="input-group control__input-group control__input-group--up">
             <label class="label control__label" for="user__nameCF">Имя</label>
             <input class="input control__input" name="userNameCF" id="user__nameCF" type="text"
@@ -327,7 +327,7 @@
                     <li class="card__item">Планировка мебели</li>
                     <li class="card__item">Сантехнический план</li>
                   </ul>
-                  <div class="card__focus design__card-focus" id="card-up4">150 руб / м<sup>2</sup></div>
+                  <div class="card__focus design__card-focus wow zoomIn" id="card-up4" data-wow-delay="0.5s">150 руб / м<sup>2</sup></div>
                 </div>
               </div>
             </div>
@@ -347,7 +347,7 @@
                     <li class="card__item">План электрики</li>
                     <li class="card__item">План света</li>
                   </ul>
-                  <div class="card__focus design__card-focus" id="card-up5">400 руб / м<sup>2</sup></div>
+                  <div class="card__focus design__card-focus wow zoomIn" id="card-up5" data-wow-delay="0.5s">400 руб / м<sup>2</sup></div>
                 </div>
               </div>
             </div>
@@ -372,7 +372,7 @@
                     <li class="card__item">Выезд на подбор материалов</li>
                     <li class="card__item">Выбор мебели</li>
                   </ul>
-                  <div class="card__focus design__card-focus" id="card-up6">900 руб / м<sup>2</sup></div>
+                  <div class="card__focus design__card-focus wow zoomIn" id="card-up6" data-wow-delay="0.5s">900 руб / м<sup>2</sup></div>
                 </div>
               </div>
             </div>
@@ -697,7 +697,7 @@
         <h3 class="footer__title">
           Остались вопросы?
         </h3>
-        <form class="form footer__form" id="footerF" action="#">
+        <form class="form footer__form" id="footerF" action="send.php" method="POST">
           <div class="input-group footer__input-group">
             <label class="label footer__label label--light" for="user__nameFF">Имя</label>
             <input class="input footer__input input--light" name="userNameFF" id="user__nameFF" type="text"
@@ -764,7 +764,7 @@
       <button class="modal__close"></button>
       <h3 class="modal__title">Оставьте заявку и наш менеджер свяжется с вами</h3>
 
-      <form class="form modal__form" id="modalF" action="#">
+      <form class="form modal__form" id="modalF" action="send.php" method="POST">
 
         <div class="input-group modal__input-group">
           <label class="label modal__label label--light" for="user__NameMF">Имя</label>
@@ -798,6 +798,9 @@
   <script src="js/jquery.validate.js"></script>
   <script src="js/jquery.mask.min.js"></script>
   <script src="js/script.js"></script>
+  <script>
+    new WOW().init()
+  </script>
 </body>
 
 </html>

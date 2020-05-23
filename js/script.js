@@ -105,25 +105,16 @@ $(document).ready(function() {
     }
   });
 
-  $('.hero__title').addClass('arrivalUp');
-  $('.hero__text').addClass('arrivalUp');
-  $('.hero__button').addClass('arrivalUp');
-  $('.hero__button').addClass('arrivalUp');
-
-  var heroScroll_point = $('.hero__scroll-down').offset().top;
+  // Анимация кнопки заказть звонок в секции header при достижении секции team
+  var typesSection_point = $('.team__section').offset().top;
   $(window).scroll(function() {
-    if($(window).scrollTop() + window.innerHeight > heroScroll_point){
-      $('.hero__scroll-down').addClass('rotateLeft');
-    }
-  });
-
-  var typesSection_point = $('.types__section').offset().top;
-  $(window).scroll(function() {
-    if($(window).scrollTop() + window.innerHeight > typesSection_point + 900){
+    if($(window).scrollTop() + window.innerHeight > typesSection_point + 200){
       $('#callbtn').addClass('callShake');
     }
+    if($(window).scrollTop() + window.innerHeight < typesSection_point){
+      $('#callbtn').removeClass('callShake');
+    }
   });
-
 
   var videoPlay_point = $('.video__play').offset().top;
   var callShake_delay = 100;
@@ -133,25 +124,38 @@ $(document).ready(function() {
     }
   });
 
-  var cardGroupOne_point = $('#card-up1').offset().top;
-  var arrivalLeft_delay = 100;
-  $(window).scroll(function() {
-    if($(window).scrollTop() + window.innerHeight > cardGroupOne_point + arrivalLeft_delay){
-      $('#card-up1').addClass('arrivalLeft');
-      $('#card-up2').addClass('arrivalLeft');
-      $('#card-up3').addClass('arrivalLeft');
-    }
-  });
+// Скрипты для анимации(заменил на анимацию с использованием animate.css и wow.js)
+  // $('.hero__title').addClass('arrivalUp');
+  // $('.hero__text').addClass('arrivalUp');
+  // $('.hero__button').addClass('arrivalUp');
+  // $('.hero__button').addClass('arrivalUp');
 
-  var cardGroupTwo_point = $('#card-up4').offset().top;
-  var arrivalLeft_delay = 300;
-  $(window).scroll(function() {
-    if($(window).scrollTop() + window.innerHeight > cardGroupTwo_point + arrivalLeft_delay){
-      $('#card-up4').addClass('arrivalLeft');
-      $('#card-up5').addClass('arrivalLeft');
-      $('#card-up6').addClass('arrivalLeft');
-    }
-  });
+  // var heroScroll_point = $('.hero__scroll-down').offset().top;
+  // $(window).scroll(function() {
+  //   if($(window).scrollTop() + window.innerHeight > heroScroll_point){
+  //     $('.hero__scroll-down').addClass('rotateLeft');
+  //   }
+  // });
+
+  // var cardGroupOne_point = $('#card-up1').offset().top;
+  // var arrivalLeft_delay = 100;
+  // $(window).scroll(function() {
+  //   if($(window).scrollTop() + window.innerHeight > cardGroupOne_point + arrivalLeft_delay){
+  //     $('#card-up1').addClass('arrivalLeft');
+  //     $('#card-up2').addClass('arrivalLeft');
+  //     $('#card-up3').addClass('arrivalLeft');
+  //   }
+  // });
+
+  // var cardGroupTwo_point = $('#card-up4').offset().top;
+  // var arrivalLeft_delay = 300;
+  // $(window).scroll(function() {
+  //   if($(window).scrollTop() + window.innerHeight > cardGroupTwo_point + arrivalLeft_delay){
+  //     $('#card-up4').addClass('arrivalLeft');
+  //     $('#card-up5').addClass('arrivalLeft');
+  //     $('#card-up6').addClass('arrivalLeft');
+  //   }
+  // });
 // ВАЛИДАТОРЫ
 $('#modalF').validate({
   highlight: function(element) {
