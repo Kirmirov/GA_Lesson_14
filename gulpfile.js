@@ -2,6 +2,7 @@ const {src, dest, watch} = require('gulp');
 const browserSync = require('browser-sync');
 const sass = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
+const cleanCSS = require('gulp-clean-css');
 
 exports.serv = function bs() {
   serveSass();
@@ -25,3 +26,10 @@ function serveSass() {
     .pipe(dest("./css"))
     .pipe(browserSync.stream());
 };
+
+exports.build = function buildCSS (done) {
+  src('css/**/**.css')
+    .pipe(cleanCSS({compatibility: 'ie8'}))
+    .pipe(dest('dist/css/'));
+  done();  
+}

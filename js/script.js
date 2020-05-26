@@ -1,9 +1,12 @@
 $(document).ready(function() {
-  var modal = $('.modal'),
+  var modal = $('.bid__modal'),
+      modalThanks = $('.thanks'),
+      thanksCloseBtn = $('.thanks__close'),
       modalBtn = $('[data-toggle=modal]'),
       closeBtn = $('.modal__close'),
       scrollUp = $('.scroll-up');
 
+// скрипты открытия/закрытия модального окна заявки
   $(modalBtn).click(function(){
     modal.toggleClass('modal--visible');
   });
@@ -23,7 +26,23 @@ $(document).ready(function() {
       modal.toggleClass('modal--visible');
     }
   })
+// скрипты закрытия окна благодарности
+  $(thanksCloseBtn).click(function(){
+    modalThanks.toggleClass('thanks--visible');
+  }); 
 
+  $(document).click(function (e){ 
+    if (modalThanks.is(e.target)){ 
+      modalThanks.toggleClass('thanks--visible'); 
+    }
+  });
+
+  $(document).keydown(function (evt){
+    if (modalThanks.hasClass('thanks--visible') && (evt.which == 27)){
+      modalThanks.toggleClass('thanks--visible');
+    }
+  })
+// скрипты появления скроллера вверх и плавная прокрутка
   $(document).scroll(function() {
     if ($(document).scrollTop() > 300) {
       scrollUp.addClass('scroll-up--show');
@@ -38,26 +57,40 @@ $(document).ready(function() {
   });
 
 // Слайдеры
-  const sliderTop = $('.swiper-container');
-  const slideBot = $('.swiper-containerbot');
+  const sliderTop = $('.swiper-container-top');
+  const sliderMid = $('.swiper-container-mid');
+  const sliderBot = $('.swiper-container-bot');
 
   var mySwiperTop = new Swiper (sliderTop, {
     loop: true,
     spaceBetween: 15,
     pagination: {
-      el: '.swiper-pagination',
+      el: '.pagination-top',
       type: 'bullets',
     },
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+      nextEl: '.btn-top-r',
+      prevEl: '.btn-top-l',
     },
   });
 
-  var mySwiperBot = new Swiper (slideBot, {
+  var mySwiperMid = new Swiper (sliderMid, {
     loop: true,
-    slaidersPerView: 1,
-    spaceBetween: 30,
+    slideersPerView: 1,
+    spaceBetween: 10,
+    pagination: {
+      el: '.pagination-mid',
+    },
+    navigation: {
+      nextEl: '.btn-mid-r',
+      prevEl: '.btn-mid-l',
+    },
+  });
+
+  var mySwiperBot = new Swiper (sliderBot, {
+    loop: true,
+    slideersPerView: 1,
+    spaceBetween: 10,
     pagination: {
       el: '.pagination-bot',
       type: 'bullets',
@@ -68,19 +101,18 @@ $(document).ready(function() {
     },
   });
 
-  var btnRight = $('.swiper-button-next');
   var btnLeft = $('.swiper-button-prev');
   var bullets = $('.swiper-pagination-bullets');
   var bullet = $('.swiper-pagination-bullet');
   var btnBotR = $('.btnBotR');
   var btnBotL = $('.btnBotL');
 
-  bullet.css('margin-right', 16);
-  btnRight.css('left', btnLeft.width() + 26 + bullets.width() + 13);
+  bullet.css('margin-right', 18);
   bullets.css('left', btnLeft.width() + 26);
 
+
   // Очень страшный кадавр отвечающий за переключенеи фокуса титулов в секции 6 шагов
-  var titlesList = $('.slaid-titles__box');
+  var titlesList = $('.slide-titles__box');
   var index = 1;
   $(document).click(function (e){
     if(index == 6){
@@ -93,15 +125,15 @@ $(document).ready(function() {
       $(index--);
       var element = titlesList.get(index);
       var elementLast = titlesList.get((index) - 1);
-      $(elementLast).addClass('slaid-titles__box--light');
-      $(element).removeClass('slaid-titles__box--light');
+      $(elementLast).addClass('slide-titles__box--light');
+      $(element).removeClass('slide-titles__box--light');
     }
     if (btnBotR.is(e.target)){ 
       var element = titlesList.get(index);
       var elementLast = titlesList.get((index) - 1);
       $(index++);
-      $(element).addClass('slaid-titles__box--light');
-      $(elementLast).removeClass('slaid-titles__box--light');
+      $(element).addClass('slide-titles__box--light');
+      $(elementLast).removeClass('slide-titles__box--light');
     }
   });
 
@@ -156,27 +188,28 @@ $(document).ready(function() {
   //     $('#card-up6').addClass('arrivalLeft');
   //   }
   // });
+  
 // ВАЛИДАТОРЫ
-$('#modalF').validate({
-  highlight: function(element) {
-    $(element).removeClass('input--success');
-    $(element).addClass('input--error');
-  },
-  unhighlight: function(element) {
-    $(element).removeClass('input--error');
-    $(element).addClass('input--success');
-  },
-  errorClass: "invalid",
-  rules: {
-    userNameMF: {
-      required: true,
-      minlength: 2,
-      maxlength: 15
+  $('#modalF').validate({
+    highlight: function(element) {
+      $(element).removeClass('input--success');
+      $(element).addClass('input--error');
     },
-    userPhoneMF: "required",
-    userEmailMF: "required"
-  },
-  errorElement: "div",
+    unhighlight: function(element) {
+      $(element).removeClass('input--error');
+      $(element).addClass('input--success');
+    },
+    errorClass: "invalid",
+    rules: {
+      userNameMF: {
+        required: true,
+        minlength: 2,
+        maxlength: 15
+      },
+      userPhoneMF: "required",
+      userEmailMF: "required"
+    },
+    errorElement: "div",
     messages: {
       userNameMF: {
         required: "Пожалуйста, укажите Ваше имя",
@@ -188,29 +221,41 @@ $('#modalF').validate({
         required: "Пожалуйста, укажите свой электронный адрес",
         email: "Пожалуйста укажите свой адрес в формате name@domain.com"
       },
-    }
-});
-
-$('#footerF').validate({
-  highlight: function(element) {
-    $(element).removeClass('input--success');
-    $(element).addClass('input--error');
-  },
-  unhighlight: function(element) {
-    $(element).removeClass('input--error');
-    $(element).addClass('input--success');
-  },
-  errorClass: "invalid",
-  rules: {
-    userNameFF: {
-      required: true,
-      minlength: 2,
-      maxlength: 15
     },
-    userPhoneFF: "required",
-    userQuestionFF: "required"
-  },
-  errorElement: "div",
+    submitHandler: function(form) {
+      $.ajax({
+        type: "POST",
+        url: "sendMF.php",
+        data: $(form).serialize(),
+        success: function (response) {
+          $(form)[0].reset();
+          modal.removeClass('modal--visible');
+          modalThanks.toggleClass('thanks--visible');
+        }
+      });
+    }
+  });
+
+  $('#footerF').validate({
+    highlight: function(element) {
+      $(element).removeClass('input--success');
+      $(element).addClass('input--error');
+    },
+    unhighlight: function(element) {
+      $(element).removeClass('input--error');
+      $(element).addClass('input--success');
+    },
+    errorClass: "invalid",
+    rules: {
+      userNameFF: {
+        required: true,
+        minlength: 2,
+        maxlength: 15
+      },
+      userPhoneFF: "required",
+      userQuestionFF: "required"
+    },
+    errorElement: "div",
     messages: {
       userNameFF: {
         required: "Пожалуйста, укажите Ваше имя",
@@ -219,28 +264,40 @@ $('#footerF').validate({
       },
       userPhoneFF: "Пожалуйта, укажите контакный номер",
       userQuestionFF: "Пожалуйста, заполните это поле",
-    }
-});
-
-$('#controlF').validate({
-  highlight: function(element) {
-    $(element).removeClass('input--success');
-    $(element).addClass('input--error');
-  },
-  unhighlight: function(element) {
-    $(element).removeClass('input--error');
-    $(element).addClass('input--success');
-  },
-  errorClass: "invalid",
-  rules: {
-    userNameCF: {
-      required: true,
-      minlength: 2,
-      maxlength: 15
     },
-    userPhoneCF: "required"
-  },
-  errorElement: "div",
+    submitHandler: function(form) {
+      $.ajax({
+        type: "POST",
+        url: "sendFF.php",
+        data: $(form).serialize(),
+        success: function (response) {
+          console.log('Ответ сервера:' + response);
+          $(form)[0].reset();
+          modalThanks.toggleClass('thanks--visible');
+        }
+      });
+    }
+  });
+
+  $('#controlF').validate({
+    highlight: function(element) {
+      $(element).removeClass('input--success');
+      $(element).addClass('input--error');
+    },
+    unhighlight: function(element) {
+      $(element).removeClass('input--error');
+      $(element).addClass('input--success');
+    },
+    errorClass: "invalid",
+    rules: {
+      userNameCF: {
+        required: true,
+        minlength: 2,
+        maxlength: 15
+      },
+      userPhoneCF: "required"
+    },
+    errorElement: "div",
     messages: {
       userNameCF: {
         required: "Пожалуйста, укажите Ваше имя",
@@ -248,9 +305,25 @@ $('#controlF').validate({
         maxlength: "Имя не должно превышать 15 символов"
       },
       userPhoneCF: "Пожалуйта, укажите контакный номер",
+    },
+    submitHandler: function(form) {
+      $.ajax({
+        type: "POST",
+        url: "sendCF.php",
+        data: $(form).serialize(),
+        success: function (response) {
+          console.log('Ответ сервера:' + response);
+          $(form)[0].reset();
+          modalThanks.toggleClass('thanks--visible');
+        }
+      });
     }
-});
+  });
 
   $('[type=tel]').mask("+7(000) 000-00-00", {placeholder: "+7(000) 000-00-00"});
 
+  // скрипты для вкладок секции fantasy
+  $(function () {
+    $('#nav-tab a').tab('show')
+  })
 });

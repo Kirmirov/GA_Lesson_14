@@ -1,51 +1,75 @@
 .swiper
-  &-containerbot
-    overflow: hidden
-    &--right
-      margin-left: 4.64rem
-      margin-right: 2.14rem
-      max-height: 26.86rem
+  &-container
+    &-top
+      overflow: hidden
+    &-mid
+      overflow: hidden
+    &-bot
+      overflow: hidden
+      &__img
+        max-height: 376px
+        max-width: 765px
+        margin-left: 4.07rem
   &-pagination
     &-bullet
-      background-color: rgba($light, 0.8)
+      background-color: rgba($light, 0.9)
       margin-right: 2.14rem
       &-active  
         background-color: $light
-  &-button
-    &-prev, &-next
-      bottom: 0
-      top: auto
-      width: 3rem
-      height: 1rem
-      outline: none
-      &::after
-        display: none
-    &-prev
-      left: 0
-      background: url('../img/arrow/slaider-left.svg') no-repeat center
-    &-next
-      background: url('../img/arrow/slaider-right.svg') no-repeat center
-.swiper-container-horizontal>.swiper-pagination-bullets
-  width: auto
-  bottom: 0
+
+
+.box-pagination
+  display: flex
+
+
+.btn-top-r, .btn-top-l
+  display: block
+  width: 3rem
+  height: 1rem  
+
+.btn-top-r
+  background: url('../img/arrow/slider-right.svg') no-repeat center
+
+.btn-top-l
+  background: url('../img/arrow/slider-left.svg') no-repeat center
+
+.pagination-top
+  display: flex
+  align-items: center
+  padding-left: 29px
+  padding-right: 20px
+
+
+.btn-mid-r, .btn-mid-l
+  display: block
+  position: relative
+  width: 36px
+  height: 36px 
+
+.btn-mid-r,
+  background: url('../img/fantasy/btn-right.png') no-repeat center
+
+.btn-mid-l
+  background: url('../img/fantasy/btn-left.png') no-repeat center
+
 
 
 
 .btnBotL, .btnBotR
-  position: absolute
+  display: block
   width: 3rem
   height: 1rem
-  bottom: 6.57rem
-  top: auto
 
 .btnBotR
-  background: url('../img/arrow/slaider-right.svg') no-repeat center
-  left: 17.57rem
+  background: url('../img/arrow/slider-right.svg') no-repeat center
 .btnBotL
-  background: url('../img/arrow/slaider-left.svg') no-repeat center
+  background: url('../img/arrow/slider-left.svg') no-repeat center
+
 .pagination-bot
-  display: flexbox
-  padding-left: 4.7857rem
+  display: flex
+  align-items: center
+  padding-left: 29px
+  padding-right: 20px
 
 
 
