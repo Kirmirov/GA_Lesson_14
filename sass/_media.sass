@@ -32,10 +32,36 @@
   .phone
     cursor: default
 
+// fantasy
+@media screen and ( max-width: 992px )
+  .fantasy
+    position: static
+    background: none
+    &::before
+      display: none
+    &__title
+      display: none
+    &__slide-title
+      display: block
+      text-align: center
+      margin: auto
+      margin-bottom: 24px
+      font-size: 22px
+      line-height: 138.6%
+    &__carousel
+      display: block
+  .nav
+    display: none
+  .tab-content
+    display: none
+  
+
 // For _types.sass and _design.sass
 @media screen and ( max-width: 992px )
   .design
     background: $dark url('../img/bg-modal.svg')
+    margin-top: -25.71rem
+    padding-top: 25.71rem
     &__title-text
       color: $light
     &__section-title

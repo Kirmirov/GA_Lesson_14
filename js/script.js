@@ -58,7 +58,6 @@ $(document).ready(function() {
 
 // Слайдеры
   const sliderTop = $('.swiper-container-top');
-  const sliderMid = $('.swiper-container-mid');
   const sliderBot = $('.swiper-container-bot');
 
   var mySwiperTop = new Swiper (sliderTop, {
@@ -71,19 +70,6 @@ $(document).ready(function() {
     navigation: {
       nextEl: '.btn-top-r',
       prevEl: '.btn-top-l',
-    },
-  });
-
-  var mySwiperMid = new Swiper (sliderMid, {
-    loop: true,
-    slideersPerView: 1,
-    spaceBetween: 10,
-    pagination: {
-      el: '.pagination-mid',
-    },
-    navigation: {
-      nextEl: '.btn-mid-r',
-      prevEl: '.btn-mid-l',
     },
   });
 
@@ -313,6 +299,50 @@ $(document).ready(function() {
         data: $(form).serialize(),
         success: function (response) {
           console.log('Ответ сервера:' + response);
+          $(form)[0].reset();
+          modalThanks.toggleClass('thanks--visible');
+        }
+      });
+    }
+  });
+  $('#frozeFFr').validate({
+    highlight: function(element) {
+      $(element).removeClass('input--success');
+      $(element).addClass('input--error');
+    },
+    unhighlight: function(element) {
+      $(element).removeClass('input--error');
+      $(element).addClass('input--success');
+    },
+    errorClass: "invalid",
+    rules: {
+      userNameFFr: {
+        required: true,
+        minlength: 2,
+        maxlength: 15
+      },
+      userPhoneFFr: "required",
+      userEmailFFr: "required"
+    },
+    errorElement: "div",
+    messages: {
+      userNameFFr: {
+        required: "Пожалуйста, укажите Ваше имя",
+        minlength: "Пожалуйста, укажите полное имя",
+        maxlength: "Имя не должно превышать 15 символов"
+      },
+      userPhoneFFr: "Пожалуйта, укажите контакный номер",
+      userEmailFFr: {
+        required: "Пожалуйста, укажите свой электронный адрес",
+        email: "Пожалуйста укажите свой адрес в формате name@domain.com"
+      },
+    },
+    submitHandler: function(form) {
+      $.ajax({
+        type: "POST",
+        url: "sendFFr.php",
+        data: $(form).serialize(),
+        success: function (response) {
           $(form)[0].reset();
           modalThanks.toggleClass('thanks--visible');
         }

@@ -9,54 +9,71 @@
     width: 100%
     height: 100%
     background-color: rgba($dark, 0.8)
+  &__text-box
+    display: flex
+    flex-direction: column
+  &__slide-title
+    display: none
   &__title
-    width: 411px
-    margin-top: 80px
-    margin-bottom: 40px
+    width: 29.357rem
+    margin-top: 5.714rem
+    margin-bottom: 2.857rem
     font-family: Yeseva One
     font-style: normal
     font-weight: normal
-    font-size: 27px
-    line-height: 37px
+    font-size: 1.9285rem
+    line-height: 2.643rem
     text-transform: uppercase
     color: $primary
   &__img-top
-    margin-bottom: 36px
+    margin-bottom: 2.57rem
   &__box-img
     display: flex
     &-content
       display: flex
       flex-direction: column
-      max-width: 353px
+      max-width: 25.14rem
       height: 100%
       &-left
-        margin-left: 70px
-        margin-top: -105px
+        margin-left: 5rem
+        margin-top: -7.5rem
       &-right
-        margin-left: 40px
-        margin-top: -175px
+        margin-left: 2.857rem
+        margin-top: -12.5rem
   &__box-links
     display: flex
     flex-direction: column
     justify-content: space-between
-    height: 528px
+    height: 37.714rem
   &__text
     margin-bottom: 13px
     font-family: 'Futura Book', sans-serif
     font-style: normal
     font-weight: 500
-    font-size: 24px
+    font-size: 1.714rem
     color: $light
-    // &--active
-    //   display: flex
-    //   flex-direction: column
-    //   color: $primary
-    //   &::after
-    //     content: ''
-    //     display: inline-block
-    //     width: 8.9rem
-    //     height: 0.5px
-    //     background-color: $primary
+  &__carousel
+    margin: auto
+    max-width: 85%
+    display: none
+  &__btn
+    width: 2.857rem
+    height: 2.857rem
+    background: url('../img/fantasy/btn-left.png') no-repeat center / cover
+
+.carousel-control-prev-icon
+  background-color: $primary
+  background-size: 45% 
+  border-radius: 50%
+  width: 36px
+  height: 36px
+
+.carousel-control-next-icon
+  background-color: $primary
+  background-size: 45% 
+  border-radius: 50%
+  width: 36px
+  height: 36px
 
 .nav-link.active>p
   display: flex
@@ -64,7 +81,6 @@
   color: $primary
   &::after
     content: ''
-    margin-top: -5px
     width: 10.5rem
     height: 0.5px
     background-color: $primary

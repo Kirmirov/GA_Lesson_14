@@ -1,8 +1,8 @@
 <?php
 
-$userName = $_POST['userNameMF'];
-$userEmail = $_POST['userEmailMF'];
-$userPhone = $_POST['userPhoneMF'];
+$userName = $_POST['userNameFFr'];
+$userEmail = $_POST['userEmailFFr'];
+$userPhone = $_POST['userPhoneFFr'];
 
 require 'phpmailer/PHPMailer.php';
 require 'phpmailer/SMTP.php';
