@@ -1,68 +1,131 @@
 .froze
   &__section
-    padding-bottom: 400px
-  &__container
-    position: relative
-  &__bg
-    position: absolute
-    display: flex
-    top: -65px
-    left: -109px
-    width: 702px
-    height: 557px
-    background: $light url('../img/froze/bg.png') no-repeat center / cover
-  &__border-circle
-    position: absolute
-    top: -77px
-    left: -238px
-    width: 593px
-    height: 635px
-    width: 590px
-    height: 630px
-    margin: 2rem auto
-    background: transparent
-    border-radius: 50%
-    box-shadow: 0 0 0 0 rgba(227, 184, 115, 0.0), 
-    0 0 0 0 rgba(227, 184, 115, 0.0), 
-    0 0 0 0 rgba(227, 184, 115, 0.0), 
-    0 0 0 0 rgba(227, 184, 115, 0.0), 
-    0 0 0 0 rgba(227, 184, 115, 0.0), 
-    0 0 0 0 rgba(227, 184, 115, 0.0), 
-    0 0 0 0 rgba(227, 184, 115, 0.0), 
-    2px 0 0 1px rgba(227, 184, 115, 0.9)
+    padding-top: 18.5rem
+    padding-bottom: 20.9285rem
   &__wrap
-    max-width: 510px
-    padding: 28px 49px 28px 49px
+    max-width: 36.4285rem
+    padding: 1.857rem 3.5rem 1.857rem 3.5rem
     display: flex
     flex-direction: column
-    background: $dark url('../img/bg-modal.svg') no-repeat center 
+    background: $dark url('../img/bg-modal.svg') no-repeat center
+    color: $light
   &__title
     max-width: 75%
-    margin-bottom: 39px
+    margin-bottom: 2.357rem
     font-style: normal
     font-weight: 500
-    font-size: 20px
-    line-height: 25px
+    font-size: 1.428rem
+    line-height: 1.786rem
     text-align: center
     color: $light
     align-self: center
+    &--down
+      margin-bottom: 0
+      text-align: start
+      font-weight: 700
+      color: $primary
   &__form
     display: flex
     flex-direction: column
   &__input-group
     display: flex
     flex-direction: column
-    margin-bottom: 40px
+    margin-bottom: 3.214rem
     &--last
-      margin-bottom: 16px
+      margin-bottom: 1.143rem
   &__label
-      margin-bottom: 0
+    margin-bottom: 5px
+  &__input
+    padding-top: 0
   &__policy
-    margin-bottom: 23px
-    margin-top: -25px
+    margin-bottom: 2.07rem
+    margin-top: -2rem
     color: $light
   &__button
-    padding: 19px 22px 19px 22px 
+    padding: 1.357rem 1.57rem 1.357rem 1.57rem 
     width: 53%
     align-self: flex-end
-  
+    border-radius: 0
+  &__content-box
+    display: flex
+    align-items: center
+    margin-top: 38px
+    margin-left: 26px
+  &__icon-box
+    display: flex
+    justify-content: center
+    align-items: center
+    margin-right: 25.5px
+    width: 72px
+    height: 72px
+    border-radius: 50%
+    background-color: $primary
+
+
+.stage
+  &__container
+    position: relative
+  &__bg
+    position: absolute
+    display: flex
+    flex-direction: column
+    align-items: flex-end
+    top: -1.0714rem
+    left: -9.14286rem
+    width: 55.857rem
+    height: 39.7857rem
+    background: $light url('../img/froze/bg.png') no-repeat center / cover
+    background-position-y: -104px
+    background-size: 92%
+  &__border-circle
+    position: absolute
+    top: -5.5rem  
+    left: -15.357rem
+    width: 41.64rem
+    height: 44.857rem
+    width: 42.143rem
+    height: 45rem
+    margin: 2rem auto
+    background: transparent
+    border-radius: 50%
+    box-shadow: 0 0 0 0 rgba($primary, 0.0), 0 0 0 0 rgba($primary, 0.0), 
+    0 0 0 0 rgba($primary, 0.0), 0 0 0 0 rgba($primary, 0.0), 0 0 0 0 rgba($primary, 0.0), 
+    0 0 0 0 rgba($primary, 0.0), 0 0 0 0 rgba($primary, 0.0), 2px 0 0 1px rgba($primary, 0.9)
+  &__title-box
+    display: flex
+    align-items: center
+    z-index: 2
+    &-one
+      padding-top: 1.2857rem
+      margin-bottom: 4.42857rem
+    &-two
+      padding-right: 8.7857rem
+      margin-bottom: 7.7857rem
+    &-three
+      padding-right: 3.57rem
+      margin-bottom: 7.714rem
+    &-four
+      padding-right: 0.5714rem
+  &__numb
+    display: flex
+    justify-content: center
+    align-items: center
+    margin-right: 1.2857rem
+    width: 3.7rem
+    height: 3.7rem
+    font-family: 'Yeseva One', cursive
+    font-size: 1.2857rem
+    text-align: center
+    background-color: $primary
+    border-radius: 50%
+    border: 6px solid $light
+    color: $light
+  &__text
+    font-style: normal
+    font-weight: 700
+    font-size: 1.2857rem
+    line-height: 21px
+    &-one
+      width: 24.14rem
+    &-four
+      width: 21.14rem

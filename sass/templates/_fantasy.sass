@@ -1,5 +1,6 @@
 .fantasy
   position: relative
+  height: 61.71rem
   background: $dark url('../img/fantasy/bg.jpg') no-repeat center / cover
   &::before
     content: ''
@@ -15,8 +16,8 @@
   &__slide-title
     display: none
   &__title
-    width: 29.357rem
-    margin-top: 5.714rem
+    max-width: 29.357rem
+    margin-top: 5.414rem
     margin-bottom: 2.857rem
     font-family: Yeseva One
     font-style: normal
@@ -27,19 +28,21 @@
     color: $primary
   &__img-top
     margin-bottom: 2.57rem
+    &--trans
+      opacity: 0.5
   &__box-img
     display: flex
     &-content
       display: flex
       flex-direction: column
-      max-width: 25.14rem
+      width: 25.14rem
       height: 100%
       &-left
         margin-left: 5rem
-        margin-top: -7.5rem
+        margin-top: -2rem
       &-right
         margin-left: 2.857rem
-        margin-top: -12.5rem
+        margin-top: -7rem
   &__box-links
     display: flex
     flex-direction: column

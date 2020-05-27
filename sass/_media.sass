@@ -1,3 +1,4 @@
+// section hero
 @media screen and ( max-width: 1440px )
   .hero__scroll-up
     margin-right: 0.5rem
@@ -31,81 +32,12 @@
       box-shadow: none
   .phone
     cursor: default
-
-// fantasy
-@media screen and ( max-width: 992px )
-  .fantasy
-    position: static
-    background: none
-    &::before
+@media screen and ( max-height: 670px) and (max-width: 1440px)
+  .hero
+    &__scroll-down
       display: none
-    &__title
-      display: none
-    &__slide-title
-      display: block
-      text-align: center
-      margin: auto
-      margin-bottom: 24px
-      font-size: 22px
-      line-height: 138.6%
-    &__carousel
-      display: block
-  .nav
-    display: none
-  .tab-content
-    display: none
   
-
-// For _types.sass and _design.sass
-@media screen and ( max-width: 992px )
-  .design
-    background: $dark url('../img/bg-modal.svg')
-    margin-top: -25.71rem
-    padding-top: 25.71rem
-    &__title-text
-      color: $light
-    &__section-title
-        color: $light
-  .box-content
-      margin-bottom: 7rem
-  .card
-    align-items: start
-    &__text
-      margin-top: -12rem
-    &__price
-      padding: 1rem 2.8rem
-    &__list
-      margin-bottom: 1.314rem
-    &__list--half
-      li:nth-child(n+8)
-        display: none
-    &__item--ellipsis
-      &::after
-        content: '...'
-@media screen and ( max-width: 375px )
-  .design
-    &__title-text
-      font-size: 15px
-      line-height: 135.84%
-
-@media screen and ( max-width: 320px )
-  .card
-    &__text
-      margin-right: 1.5rem
-
-// отступ от секции team на мобильных версиях
-@media screen and ( max-width: 991px )
-  .design
-    padding-bottom: 340px
-
 @media screen and ( max-width: 570px )
-  .contacts
-    &__button
-      display: none
-    &__phone
-      margin-right: 0
-      color: $light
-      text-decoration: none
   .hero
     &__title
       font-size: 23px
@@ -128,19 +60,123 @@
       display: none
     &__scroll-up
       display: none
-@media screen and ( max-width: 375px )
-  .hero
-    &__button
-      min-width: 100%
 @media screen and ( max-height: 560px  )
   .hero
     &__scroll-down
       display: none
-@media screen and ( max-height: 670px) and (max-width: 1440px)
+@media screen and ( max-width: 375px )
   .hero
-    &__scroll-down
-      display: none
+    &__button
+      min-width: 100%
 
+// froze
+@media screen and ( max-width: 991px )
+  .froze
+    display: none
+    &__section
+      padding: 0
+
+
+// fantasy
+@media screen and ( max-width: 1030px )
+  .fantasy
+    &__title
+      width: 27.357rem
+@media screen and ( max-width: 992px )
+  .fantasy
+    position: static
+    background: none
+    &::before
+      display: none
+    &__title
+      display: none
+    &__slide-title
+      display: block
+      text-align: center
+      margin: auto
+      margin-bottom: 24px
+      font-size: 22px
+      line-height: 138.6%
+    &__carousel
+      display: block
+  .nav
+    display: none
+  .tab-content
+    display: none
+
+
+// For _types.sass and _design.sass
+@media screen and ( max-width: 992px )
+  .design
+    background: $dark url('../img/bg-modal.svg')
+    margin-top: -25.71rem
+    padding-top: 25.71rem
+    &__title-text
+      color: $light
+    &__section-title
+        color: $light
+  .box-content
+      margin: auto
+      margin-bottom: 7rem
+  .card
+    align-items: start
+    &__text
+      margin-top: -12rem
+    &__price
+      padding: 1rem 2.8rem
+    &__list
+      margin-bottom: 1.314rem
+    &__list--half
+      li:nth-child(n+8)
+        display: none
+    &__item--ellipsis
+      &::after
+        content: '...'
+@media screen and ( max-width: 425px )
+  .design
+    margin-top: -43.71rem
+    padding-top: 14.357rem
+    padding-bottom: 364px
+@media screen and ( max-width: 375px )
+  .design
+    &__title-text
+      font-size: 15px
+      line-height: 135.84%
+@media screen and ( max-width: 425px )
+  .cards
+    align-items: start
+@media screen and ( max-width: 375px )
+  .card
+    &__text
+      min-width: 270px
+  .cards
+    align-items: start
+@media screen and ( max-width: 320px )
+  .card
+    &__text
+      margin-right: 1.5rem
+@media screen and ( max-width: 425px )
+  .types
+    &__section
+      padding-top: 7.07rem
+    &__section-title
+      margin-bottom: 4.1rem
+
+// отступ от секции team на мобильных версиях
+@media screen and ( max-width: 991px )
+  .design
+    padding-bottom: 340px
+
+@media screen and ( max-width: 570px )
+  .contacts
+    &__button
+      display: none
+    &__phone
+      margin-right: 0
+      color: $light
+      text-decoration: none
+
+// project
 @media screen and ( max-width: 768px )
   .project
     &-card
@@ -155,6 +191,15 @@
     &__title-content
       &::after
         display: none
+@media screen and ( max-width: 425px )
+  .project
+    padding-bottom: 325px
+    &__title-content
+      margin-bottom: 2.14rem
+    &-text-box
+      padding-top: 31px
+      padding-bottom: 0
+
 
 // sixfoots
 @media screen and ( max-width: 1440px )
@@ -216,6 +261,7 @@
     &__input
       padding-top: 5px
       background-color: transparent
+      color: $light
       &::placeholder
         font-size: 18px
         color: $light
@@ -232,7 +278,11 @@
       margin-bottom: 62px
       color: $light
     &__block-text
+      margin-bottom: 2.285rem
+      font-size: 14px
+      line-height: 169.8%
       color: $light
+
 
 // team section
 
@@ -256,7 +306,23 @@
     &__block-text
       display: none
     &__title-text
-      margin-bottom: 40px
+      margin-bottom: 73px
+    &__box-content
+      margin-left: 42px
+      margin-bottom: 105px
+      &--pr
+        padding-right: 0
+      &--pl
+        padding-left: 0
+    &__img
+      width: 305px
+  .card
+    &__bg-icon
+      max-width: 74px
+      max-height: 74px
+    &__img-wrap
+      width: 305px
+      overflow: visible
 
 // clients section
 @media screen and ( max-width: 991px )

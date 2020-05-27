@@ -23,7 +23,7 @@
         <nav class="nav menu__nav">
           <a class="nav__item" href="#hero">Главная</a>
           <a class="nav__item" href="#project">Проекты</a>
-          <a class="nav__item" href="#">Замер</a>
+          <a class="nav__item" href="#froze">Замер</a>
           <a class="nav__item" href="#team">Команда</a>
           <a class="nav__item" href="#clients">Отзывы</a>
           <a class="nav__item" href="#contacts">Контакты</a>
@@ -58,7 +58,7 @@
             заявку</button>
         </div>
       </div>
-      <a class="hero__scroll-down wow rotateInDownLeft" href="#" data-wow-delay="1.5s">Листайте вниз</a>
+      <a class="hero__scroll-down wow rotateInDownLeft" href="#project" data-wow-delay="1.5s">Листайте вниз</a>
     </section>
     <!-- Секция ПРОЕКТЫ -->
     <section class="section project section--dark" id="project">
@@ -76,7 +76,7 @@
                 <div class="swiper-slide">
                   <div class="project-text-box">
                     <div class="row no-gutters">
-                      <div class="col-6 col-md-4">
+                      <div class="col-5 col-md-4">
                         <div class="project-slide__text">
                           <h3 class="project-slide__heading">Город:</h3>
                           <span class="project-slide__value">Ростов на дону<br>ЖК Адмирал</span>
@@ -88,13 +88,13 @@
                           <span class="project-slide__value">81 м<sup>2</sup> </span>
                         </div>
                       </div>
-                      <div class="col-6 col-md-4">
+                      <div class="col-5 col-md-4">
                         <div class="project-slide__text">
                           <h3 class="project-slide__heading">Срок ремонта:</h3>
                           <span class="project-slide__value">3,5 месяца</span>
                         </div>
                       </div>
-                      <div class="col-6 col-md-8 pl-4">
+                      <div class="col-5 col-md-8 pl-4">
                         <div class="project-slide__text">
                           <h3 class="project-slide__heading">Стоимость:</h3>
                           <span class="project-slide__value">По запросу</span>
@@ -221,7 +221,7 @@
             <input class="input control__input" name="userPhoneCF" id="user__phoneCF" type="tel"
               placeholder="Ваш номер телефона">
           </div>
-          <button class="button button--primary control__button">Отправить</button>
+          <button class="button--primary control__button">Отправить</button>
           <div class="policy control__policy">
             <input class="policy__checkbox" id="policy-checkboxCF" type="checkbox" name="policy-checkbox" checked>
             <label class="policy__label contol__policy-label" for="policy-checkboxCF">Я соглашаюсь с обработкой данных
@@ -243,7 +243,7 @@
         <div class="row">
           <div class="col-12 col-lg-4 d-flex justify-content-center">
             <div class="box-content types__box-content">
-              <div class="card">
+              <div class="cards">
                 <img class="card__img" src="img/types_row/1.jpg" alt="">
                 <div class="card__text">
                   <h3 class="card__title">Косметический ремонт</h3>
@@ -263,7 +263,7 @@
           </div>
           <div class="col-12 col-lg-4 d-flex justify-content-center">
             <div class="box-content types__box-content">
-              <div class="card">
+              <div class="cards">
                 <img class="card__img" src="img/types_row/2.jpg" alt="">
                 <div class="card__text">
                   <h3 class="card__title">Капитальный ремонт</h3>
@@ -283,7 +283,7 @@
           </div>
           <div class="col-md-12 col-lg-4 d-flex justify-content-center">
             <div class="box-content types__box-content">
-              <div class="card">
+              <div class="cards">
                 <img class="card__img" src="img/types_row/3.jpg" alt="">
                 <div class="card__text">
                   <h3 class="card__title">Дизайнерский ремонт</h3>
@@ -305,18 +305,33 @@
       </div>
     </section>
     <!-- Секция ЗАМЕР -->
-    <section class="section froze__section">
+    <section class="section froze froze__section" id="froze">
       <div class="container">
-        <div class="row no-gutters">
+        <div class="row">
           <div class="col-7">
-            <div class="froze__container">
-              <div class="froze__bg">
-                
+            <div class="stage__container">
+              <div class="stage__bg">
+                <div class="stage__title-box stage__title-box-one">
+                  <div class="stage__numb">01</div>
+                  <div class="stage__text stage__text-one">Наш специалист приедет для замеров в день контакта или назначит удобную для вас дату</div>
+                </div>
+                <div class="stage__title-box stage__title-box-two">
+                  <div class="stage__numb">02</div>
+                  <div class="stage__text stage__text-two">Бесплатный замер</div>
+                </div>
+                <div class="stage__title-box stage__title-box-three">
+                  <div class="stage__numb">03</div>
+                  <div class="stage__text stage__text-three">Бесплатная консультация</div>
+                </div>
+                <div class="stage__title-box stage__title-box-four">
+                  <div class="stage__numb">04</div>
+                  <div class="stage__text stage__text-four">Получите смету расходов и сроки вашего будущего ремонта</div>
+                </div>
               </div>
-              <div class="froze__border-circle"></div>
+              <div class="stage__border-circle"></div>
             </div>
           </div>
-          <div class="col-5 align-items-center">
+          <div class="col-5 align-items-end">
             <div class="froze__wrap">
               <h3 class="froze__title">Оставьте заявку на бесплатный выезд замерщика</h3>
               <form class="form froze__form" id="frozeFFr" action="sendFFr.php" method="POST">
@@ -343,14 +358,12 @@
               </form>
             </div>
             <div class="froze__content-box">
-              <div class="froze__content-box-pig">
+              <div class="froze__icon-box">
                 <img class="froze__icon" src="img/froze/pig.svg" alt="">
               </div>
-              <div class="froze__content-box-text">
-                <h3 class="froze__title froze__title--primary">
+                <h3 class="froze__title froze__title--down">
                   Это поможет сэкономить 10 - 20% от стоимости материалов
                 </h3>
-              </div>
             </div>
           </div>
         </div>
@@ -363,7 +376,7 @@
           Мы реализуем ваши самые смелые фантазии
         </h3>
         <div class="row">
-          <div class="col-md-12 col-lg-4">
+          <div class="col-lg-5">
             <div class="fantasy__text-box">
               <h3 class="fantasy__title">
                 Мы реализуем ваши самые смелые фантазии
@@ -405,12 +418,12 @@
               </div>
             </div>
           </div>
-          <div class="col-8 d-flex justify-content-end">
+          <div class="col-7 d-flex justify-content-end">
             <div class="tab-content">
               <div class="tab-pane fade show active" id="amer">
                 <div class="fantasy__box-img">
                   <div class="fantasy__box-img-content fantasy__box-img-content-left">
-                    <img class="fantasy__img-top" src="img/fantasy/american_classic/1.jpg" alt="">
+                    <img class="fantasy__img-top fantasy__img-top--trans" src="img/fantasy/american_classic/1.jpg" alt="">
                     <img src="img/fantasy/american_classic/2.jpg" alt="">
                   </div>
                   <div class="fantasy__box-img-content fantasy__box-img-content-right">
@@ -422,7 +435,7 @@
               <div class="tab-pane fade" id="imp">
                 <div class="fantasy__box-img">
                   <div class="fantasy__box-img-content fantasy__box-img-content-left">
-                    <img class="fantasy__img-top" src="img/fantasy/imperial_style/1.jpg" alt="">
+                    <img class="fantasy__img-top fantasy__img-top--trans" src="img/fantasy/imperial_style/1.jpg" alt="">
                     <img src="img/fantasy/imperial_style/3.jpg" alt="">
                   </div>
                   <div class="fantasy__box-img-content fantasy__box-img-content-right">
@@ -434,7 +447,7 @@
               <div class="tab-pane fade" id="class">
                 <div class="fantasy__box-img">
                   <div class="fantasy__box-img-content fantasy__box-img-content-left">
-                    <img class="fantasy__img-top" src="img/fantasy/classic/1.jpg" alt="">
+                    <img class="fantasy__img-top fantasy__img-top--trans" src="img/fantasy/classic/1.jpg" alt="">
                     <img src="img/fantasy/classic/2.jpg" alt="">
                   </div>
                   <div class="fantasy__box-img-content fantasy__box-img-content-right">
@@ -446,7 +459,7 @@
               <div class="tab-pane fade" id="loft">
                 <div class="fantasy__box-img">
                   <div class="fantasy__box-img-content fantasy__box-img-content-left">
-                    <img class="fantasy__img-top" src="img/fantasy/loft/1.jpg" alt="">
+                    <img class="fantasy__img-top fantasy__img-top--trans" src="img/fantasy/loft/1.jpg" alt="">
                     <img src="img/fantasy/loft/2.jpg" alt="">
                   </div>
                   <div class="fantasy__box-img-content fantasy__box-img-content-right">
@@ -458,7 +471,7 @@
               <div class="tab-pane fade" id="min">
                 <div class="fantasy__box-img">
                   <div class="fantasy__box-img-content fantasy__box-img-content-left">
-                    <img class="fantasy__img-top" src="img/fantasy/minimal/1.jpg" alt="">
+                    <img class="fantasy__img-top fantasy__img-top--trans" src="img/fantasy/minimal/1.jpg" alt="">
                     <img src="img/fantasy/minimal/2.jpg" alt="">
                   </div>
                   <div class="fantasy__box-img-content fantasy__box-img-content-right">
@@ -470,7 +483,7 @@
               <div class="tab-pane fade" id="prov">
                 <div class="fantasy__box-img">
                   <div class="fantasy__box-img-content fantasy__box-img-content-left">
-                    <img class="fantasy__img-top" src="img/fantasy/american_classic/1.jpg" alt="">
+                    <img class="fantasy__img-top fantasy__img-top--trans" src="img/fantasy/american_classic/1.jpg" alt="">
                     <img src="img/fantasy/american_classic/2.jpg" alt="">
                   </div>
                   <div class="fantasy__box-img-content fantasy__box-img-content-right">
@@ -482,7 +495,7 @@
               <div class="tab-pane fade" id="rom">
                 <div class="fantasy__box-img">
                   <div class="fantasy__box-img-content fantasy__box-img-content-left">
-                    <img class="fantasy__img-top" src="img/fantasy/american_classic/1.jpg" alt="">
+                    <img class="fantasy__img-top fantasy__img-top--trans" src="img/fantasy/american_classic/1.jpg" alt="">
                     <img src="img/fantasy/american_classic/2.jpg" alt="">
                   </div>
                   <div class="fantasy__box-img-content fantasy__box-img-content-right">
@@ -494,7 +507,7 @@
               <div class="tab-pane fade" id="scand">
                 <div class="fantasy__box-img">
                   <div class="fantasy__box-img-content fantasy__box-img-content-left">
-                    <img class="fantasy__img-top" src="img/fantasy/american_classic/1.jpg" alt="">
+                    <img class="fantasy__img-top fantasy__img-top--trans" src="img/fantasy/american_classic/1.jpg" alt="">
                     <img src="img/fantasy/american_classic/2.jpg" alt="">
                   </div>
                   <div class="fantasy__box-img-content fantasy__box-img-content-right">
@@ -506,7 +519,7 @@
               <div class="tab-pane fade" id="mid">
                 <div class="fantasy__box-img">
                   <div class="fantasy__box-img-content fantasy__box-img-content-left">
-                    <img class="fantasy__img-top" src="img/fantasy/american_classic/1.jpg" alt="">
+                    <img class="fantasy__img-top fantasy__img-top--trans" src="img/fantasy/american_classic/1.jpg" alt="">
                     <img src="img/fantasy/american_classic/2.jpg" alt="">
                   </div>
                   <div class="fantasy__box-img-content fantasy__box-img-content-right">
@@ -518,7 +531,7 @@
               <div class="tab-pane fade" id="tech">
                 <div class="fantasy__box-img">
                   <div class="fantasy__box-img-content fantasy__box-img-content-left">
-                    <img class="fantasy__img-top" src="img/fantasy/american_classic/1.jpg" alt="">
+                    <img class="fantasy__img-top fantasy__img-top--trans" src="img/fantasy/american_classic/1.jpg" alt="">
                     <img src="img/fantasy/american_classic/2.jpg" alt="">
                   </div>
                   <div class="fantasy__box-img-content fantasy__box-img-content-right">
@@ -530,7 +543,7 @@
               <div class="tab-pane fade" id="elek">
                 <div class="fantasy__box-img">
                   <div class="fantasy__box-img-content fantasy__box-img-content-left">
-                    <img class="fantasy__img-top" src="img/fantasy/american_classic/1.jpg" alt="">
+                    <img class="fantasy__img-top fantasy__img-top--trans" src="img/fantasy/american_classic/1.jpg" alt="">
                     <img src="img/fantasy/american_classic/2.jpg" alt="">
                   </div>
                   <div class="fantasy__box-img-content fantasy__box-img-content-right">
@@ -544,7 +557,7 @@
         </div>
       </div>
       <div class="fantasy__carousel">
-        <div id="carousel" class="carousel slide" data-touch="true" data-interval="false" data-ride="carousel">
+        <div class="carousel slide"  id="carousel" data-touch="true" data-interval="false" data-ride="carousel">
           <div class="carousel-inner">
             <div class="carousel-item active">
               <div class="fantasy__img-slide">
@@ -594,7 +607,7 @@
         <div class="row">
           <div class="col-12 col-lg-4 d-flex justify-content-center">
             <div class="box-content design__box-content">
-              <div class="card">
+              <div class="cards">
                 <img class="card__img" src="img/types_row/1.jpg" alt="">
                 <div class="card__text">
                   <h3 class="card__title">Минимальный</h3>
@@ -612,7 +625,7 @@
           </div>
           <div class="col-12 col-lg-4 d-flex justify-content-center">
             <div class="box-content types__box-content">
-              <div class="card">
+              <div class="cards">
                 <img class="card__img" src="img/types_row/3.jpg" alt="">
                 <div class="card__text">
                   <h3 class="card__title">Стандартный</h3>
@@ -632,7 +645,7 @@
           </div>
           <div class="col-md-12 col-lg-4 d-flex justify-content-center">
             <div class="box-content types__box-content">
-              <div class="card">
+              <div class="cards">
                 <img class="card__img" src="img/types_row/4.jpg" alt="">
                 <div class="card__text">
                   <h3 class="card__title">Полный</h3>
@@ -835,13 +848,15 @@
           </div>
         </div>
         <div class="row">
-          <div class="d-flex col-12 justify-content-sm-center col-lg-4 justify-content-lg-end pr-4">
-            <div class="box-content team__box-content-left">
-              <div class="card card__team">
-                <div class="card__bg-box">
+          <div class="d-flex col-12 justify-content-sm-center col-lg-4 justify-content-lg-end">
+            <div class="team__box-content team__box-content--pr">
+              <div class="cards card__team">
+                <div class="card__bg-icon">
                   <img class="card__icon" src="img/team/brain.svg" alt="">
                 </div>
-                <img class="card__img" src="img/team/man-1.jpg" alt="">
+                <div class="card__img-wrap">
+                  <img class="card__img team__img" src="img/team/man-1.jpg" alt="">
+                </div>
                 <div class="card__text card__text-team">
                   <h3 class="card__title">Алексей Колмаков</h3>
                   <p class="card__profession">Проектный менеджер</p>
@@ -851,12 +866,14 @@
             </div>
           </div>
           <div class="d-flex col-12 justify-content-sm-center col-lg-4 justify-content-lg-center">
-            <div class="box-content team__box-content">
-              <div class="card card__team">
-                <div class="card__bg-box">
+            <div class="team__box-content">
+              <div class="cards card__team">
+                <div class="card__bg-icon">
                   <img class="card__icon" src="img/team/write.svg" alt="">
                 </div>
-                <img class="card__img" src="img/team/woman-2.jpg" alt="">
+                <div class="card__img-wrap">
+                  <img class="card__img team__img" src="img/team/woman-2.jpg" alt="">
+                </div>
                 <div class="card__text card__text-team">
                   <h3 class="card__title">Алиса Сухорукова</h3>
                   <p class="card__profession">Дизайнер</p>
@@ -865,13 +882,15 @@
               </div>
             </div>
           </div>
-          <div class="d-flex col-12 justify-content-sm-center col-lg-4 justify-content-lg-start pl-4">
-            <div class="box-content team__box-content-right">
-              <div class="card card__team">
-                <div class="card__bg-box">
+          <div class="d-flex col-12 justify-content-sm-center col-lg-4 justify-content-lg-start">
+            <div class="team__box-content team__box-content--pl">
+              <div class="cards card__team">
+                <div class="card__bg-icon">
                   <img class="card__icon" src="img/team/bag.svg" alt="">
                 </div>
-                <img class="card__img" src="img/team/man-3.jpg" alt="">
+                <div class="card__img-wrap">
+                  <img class="card__img team__img" src="img/team/man-3.jpg" alt="">
+                </div>
                 <div class="card__text card__text-team">
                   <h3 class="card__title">Давид Волынев</h3>
                   <p class="card__profession">Бригадир</p>
@@ -1011,15 +1030,19 @@
           <button class="button button--primary footer__button">Отправить</button>
         </form>
       </div>
-      <div class="footer__down">
+      <div class="footer__down" id="contacts">
         <div class="footer__adress">
           <h3 class="footer__title footer__title-content">
             Ростов на дону, Торговый центр Plaza Прямой телефон +7 (999) 768 32 99
           </h3>
         </div>
         <div class="footer__icons">
-          <img class="footer__icons-img" src="img/footer/letter.png" alt="">
-          <img class="footer__icons-img" src="img/footer/insta.png" alt="">
+          <a href="#" class="footer__link">
+            <img class="footer__icons-img" src="img/footer/letter.png" alt="">
+          </a>
+          <a href="#" class="footer__link">
+            <img class="footer__icons-img" src="img/footer/insta.png" alt="">
+          </a>
         </div>
         <div class="map footer__map">
           <script type="text/javascript" charset="utf-8" async
@@ -1033,14 +1056,14 @@
         <div class="menu">
           <div class="logo menu__logo">Repair Design Project</div>
           <nav class="nav menu__nav">
-            <a class="nav__item" href="#">Главная</a>
-            <a class="nav__item" href="#">Проекты</a>
-            <a class="nav__item" href="#">Замер</a>
-            <a class="nav__item" href="#">Команда</a>
-            <a class="nav__item" href="#">Отзывы</a>
-            <a class="nav__item" href="#">Контакты</a>
+            <a class="nav__item" href="#hero">Главная</a>
+            <a class="nav__item" href="#project">Проекты</a>
+            <a class="nav__item" href="#froze">Замер</a>
+            <a class="nav__item" href="#team">Команда</a>
+            <a class="nav__item" href="#clients">Отзывы</a>
+            <a class="nav__item" href="#contacts">Контакты</a>
           </nav>
-          <div class="contacts menu__contacts" id="contacts">
+          <div class="contacts menu__contacts">
             <a class="phone contacts__phone" href="tel:+79997683299">+7 (999) 768-32-99</a>
             <button class="button contacts__button button--primary" id="callbtn" data-toggle="modal">Заказать
               звонок

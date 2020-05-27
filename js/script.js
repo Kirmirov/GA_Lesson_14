@@ -42,6 +42,20 @@ $(document).ready(function() {
       modalThanks.toggleClass('thanks--visible');
     }
   })
+
+// скрипты прокрутки якорных ссылок
+  $(document).on('click', '.menu__nav a', function() {
+    var linkID = $(this).attr('href');
+    $('html, body').animate({ 
+      scrollTop: $(linkID).offset().top - 100
+    }, 'slow');
+  });
+  $(document).on('click', '.hero__scroll-down', function() {
+    var linkID = $(this).attr('href');
+    $('html, body').animate({ 
+      scrollTop: $(linkID).offset().top - 100
+    }, 'slow');
+  });
 // скрипты появления скроллера вверх и плавная прокрутка
   $(document).scroll(function() {
     if ($(document).scrollTop() > 300) {
@@ -53,7 +67,7 @@ $(document).ready(function() {
   
   scrollUp.on('click', function(e) {
     e.preventDefault();
-    $('html, body').animate({scrollTop:0}, '300');
+    $('html, body').animate({scrollTop:0}, 'slow');
   });
 
 // Слайдеры
